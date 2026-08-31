@@ -8,7 +8,7 @@
 <meta name="description" content="Hyderabad Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260825-202254-4377">
+<meta name="build" content="20260831-231639-3472">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -902,7 +902,7 @@
      NOW (below, once iso() exists) is the reader's real date, and it decides what is
      still ahead of them. That is what stops a link shared in July from still offering
      you a 29 July show in September. */
-  var TODAY = "2026-08-26";      // refresh marker — bump on every update
+  var TODAY = "2026-09-01";      // refresh marker — bump on every update
   var BASELINE = "2026-08-16";   // initial load; entries from this date are not "new"
   var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
 
@@ -970,6 +970,7 @@
     "Cafe Niloufer, Hitech City":[17.46973,78.38524,2],
     "Deccan Serai, HITEC City":[17.44901,78.38314,2],
     "DevX, HITEC City":[17.44901,78.38314,2],
+    "Draper Startup House, Gachibowli":[17.44362,78.35196,2],
     "Fat Pigeon — Bar Hop, Jubilee Hills":[17.43084,78.41029,2],
     "Gachibowli Stadium":[17.44941,78.34847,1],
     "Gipi\u0027s Pizza House \u0026 Cafe, Himayath Nagar":[17.39848,78.48647,2],
@@ -977,9 +978,12 @@
     "Heart Cup Coffee, Gachibowli":[17.45971,78.36865,1],
     "HITEC City, Hyderabad":[17.44901,78.38314,1],
     "Jammin Junction Bar \u0026 Kitchen, Jubilee Hills":[17.43084,78.41029,2],
+    "KBR National Park, Jubilee Hills":[17.42029,78.42046,1],
+    "Kshana Coffee, Madhapur":[17.44089,78.39163,2],
     "La Vie En Rose Cafe \u0026 Bistro, Gachibowli":[17.44362,78.35196,2],
     "Lamakaan, Banjara Hills":[17.42091,78.44736,1],
     "LSEG, Madhapur":[17.44089,78.39163,2],
+    "Makobrew World Coffee Bar, Jubilee Hills":[17.43084,78.41029,2],
     "Mehdipatnam, Hyderabad":[17.39426,78.43425,1],
     "Mindspace Social, Hitech City":[17.46969,78.38515,2],
     "Nampally Railway Station, Hyderabad":[17.39240,78.47015,1],
@@ -990,13 +994,16 @@
     "Quake Arena, Kondapur":[17.45879,78.37306,2],
     "Red Rhino, Hitech City":[17.43311,78.37844,1],
     "Roast CCx, Banjara Hills":[17.42360,78.43230,1],
+    "Ruth\u0027s Cafe, Gachibowli":[17.44362,78.35196,2],
     "Shilpakala Vedika, Madhapur":[17.45141,78.37938,1],
     "Socialx, Madhapur":[17.44089,78.39163,2],
+    "Srinagar Colony, Banjara Hills":[17.43089,78.42817,1],
     "Syncpedia Technologies, Madhapur":[17.44089,78.39163,2],
     "The Comedy Theatre, Gachibowli":[17.44362,78.35196,2],
     "The Headquarters Orbit, Raidurg":[17.41417,78.39072,2],
     "The Headquarters Space Orbit, Raidurg":[17.41417,78.39072,2],
     "The Street Comedy Club, Madhapur":[17.44089,78.39163,2],
+    "Third Wave Coffee, Khajaguda":[17.45744,78.37209,1],
     "Underdoggs, Hitech City":[17.46969,78.38515,2],
     "Vault Brewery, Jubilee Hills":[17.43084,78.41029,2]
   };
@@ -1051,65 +1058,20 @@
      note:"A crowd-work format rather than scripted sets — the room reads the audience instead of the other way round.",
      cost:"₹399", url:"https://www.district.in/events/office-chugli-standup-comedy-crowd-work-show-sep20-2026-buy-tickets", added:"2026-08-16"},
 
-    {date:"2026-08-30", a:"hitech", cat:"stage", name:"Monster — Gurleen Pannu",
-     when:"Sun 30 Aug · 7:00–8:10 PM", where:"KLN Prasad Auditorium, FTCCI",
-     note:"A touring solo hour at a seminar-hall venue rather than the usual comedy-club rooms — a different crowd from Gachibowli's regulars.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/monster-ft-gurleen-pannu/3900030510477714", added:"2026-08-20"},
-
-    /* ===== added 26 Aug ===== */
-    {date:"2026-08-28", a:"hitech", cat:"stage", name:"Comedy Crackers",
-     when:"Fri 28 Aug", where:"The Comedy Theatre, Gachibowli",
-     note:"A two-hander with Saikiran and Rohit Swain — the same room as AIR 1 and Voices in My Head.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/comedy-crackers/3900030608094100", added:"2026-08-26"},
-
-    {date:"2026-08-29", a:"hitech", cat:"stage", name:"Rajasekhar Mamidanna Live",
-     when:"Sat 29 Aug · 7:00–8:15 PM", where:"KLN Prasad Auditorium, FTCCI",
-     note:"A solo hour at the same seminar-hall venue as Monster the following evening.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/rajasekhar-mamidanna-live/3900030609556606", added:"2026-08-26"},
-
-    {date:"2026-08-30", a:"hitech", cat:"stage", name:"Mad Monkeys",
-     when:"Sun 30 Aug · 9:00 PM", where:"The Street Comedy Club, Madhapur",
-     note:"A late-night slot at the Madhapur room, alongside ChinthaPandu and the Friday open mic.",
-     cost:"₹249 onwards", url:"https://www.district.in/events/mad-monkeys-jun28-2026-buy-tickets", added:"2026-08-26"},
-
-    {date:"2026-09-06", a:"hitech", cat:"stage", name:"Sanity in Diversity — Vivek Muralidharan",
+        /* ===== added 26 Aug ===== */
+                {date:"2026-09-06", a:"hitech", cat:"stage", name:"Sanity in Diversity — Vivek Muralidharan",
      when:"Sun 6 Sep · 5:00 PM", where:"The Street Comedy Club, Madhapur",
      note:"A Sunday-afternoon solo set, earlier in the day than this room's usual evening shows.",
      cost:"Ticketed", url:"https://allevents.in/hyderabad/sanity-in-diversity-ft-vivek-muralidharan/3900030606632421", added:"2026-08-26"},
 
-    {date:"2026-08-29", a:"hitech", cat:"music", name:"SwaRagam — Massive DSP x Thaman Jamming Hits",
-     when:"Sat 29 Aug · 4:30–8:00 PM", where:"Amnesia Sky Bar, Madhapur",
-     note:"A film-music jam at the same Madhapur bar as the Bollywood Jamming Night.",
-     cost:"₹199", url:"https://allevents.in/hyderabad/swaragam-massive-dsp-x-thaman-jamming-hits/4100030610588217", added:"2026-08-26"},
-
-    {date:"2026-08-30", a:"hitech", cat:"stage", name:"Voices in My Head — Rohit Swain",
-     when:"Sun 30 Aug · 7:30–8:45 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"A solo hour at the same Gachibowli room as AIR 1, Office Chugli and Quadrant Life Crisis.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/voices-in-my-head-by-rohit-swain/3900030601570414", added:"2026-08-20"},
-
-    /* ================= THE STREET COMEDY CLUB, MADHAPUR ================= */
-        {date:"2026-08-29", a:"hitech", cat:"stage", name:"ChinthaPandu",
-     when:"Sat 29 Aug · 9:00 PM", where:"The Street Comedy Club, Madhapur",
-     note:"A Telugu stand-up set at the same 100 Feet Road room that runs the Friday open mic.",
-     cost:"₹199", url:"https://www.district.in/events/chinthapandu-dec31-2025-buy-tickets", added:"2026-08-16"},
-
-    {date:"2026-08-30", a:"hitech", cat:"stage", name:"Ganesh Live",
-     when:"Sun 30 Aug · 7:00 PM", where:"The Street Comedy Club, Madhapur",
-     note:"A fourth distinct weekend show at this room, alongside ChinthaPandu, Jathiratnalu and B.Tech to Bewars.",
-     cost:"₹201", url:"https://www.district.in/events/ganesh-live-aug30-2026-buy-tickets", added:"2026-08-19"},
-
-    {date:"2026-09-05", a:"hitech", cat:"stage", name:"Quadrant Life Crisis — Navin Kumar",
+            /* ================= THE STREET COMEDY CLUB, MADHAPUR ================= */
+                {date:"2026-09-05", a:"hitech", cat:"stage", name:"Quadrant Life Crisis — Navin Kumar",
      when:"Sat 5 Sep · 7:30–9:00 PM", where:"The Comedy Theatre, Gachibowli",
      note:"A solo stand-up hour at Gachibowli's dedicated comedy venue, the same room as AIR 1 and Office Chugli.",
      cost:"Ticketed", url:"https://allevents.in/hyderabad/quadrant-life-crisis-stand-up-solo-by-navin-kumar/3900030458006946", added:"2026-08-19"},
 
             /* ================= OTHER COMEDY ================= */
-    {date:"2026-08-29", a:"multi", cat:"stage", name:"Just Go With It — Improv Comedy",
-     when:"Sat 29 Aug · 7:00 PM", where:"Yogibear Collectives",
-     note:"Fully improvised scenes built from audience suggestions, rather than a stand-up set.",
-     cost:"₹399", url:"https://www.district.in/events/just-go-with-it-an-improv-comedy-show-aug29-2026-buy-tickets", added:"2026-08-16"},
-
-    /* ================= GIPI'S PIZZA HOUSE & CAFE, HIMAYATH NAGAR ================= */
+        /* ================= GIPI'S PIZZA HOUSE & CAFE, HIMAYATH NAGAR ================= */
     {dow:6, a:"central", cat:"craft", name:"Clay Trinket Workshop",
      when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
      note:"A beginner clay session at the venue currently carrying this board's whole central-Hyderabad craft programme — one of nine distinct workshops it runs.",
@@ -1141,12 +1103,7 @@
      cost:"₹999+", url:"https://www.district.in/events/couple-clay-keychain-aug1-2026-buy-tickets", added:"2026-08-16"},
 
     /* ================= 100 FOLDS ACADEMY, JUBILEE HILLS ================= */
-        {date:"2026-08-29", a:"banjara", cat:"food", name:"Doughnut Extravaganza",
-     when:"Sat 29 Aug", where:"100 Folds Academy, Jubilee Hills",
-     note:"Filled and glazed doughnuts from scratch, a lighter session than the academy's full-day classes.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/doughnut-extravaganza/3900030522691456", added:"2026-08-16"},
-
-    {date:"2026-09-04", a:"banjara", cat:"food", name:"Gelatos and Frozen Desserts",
+            {date:"2026-09-04", a:"banjara", cat:"food", name:"Gelatos and Frozen Desserts",
      when:"Fri 4 Sep · 10:00 AM–3:00 PM", where:"100 Folds Academy, Jubilee Hills",
      note:"A full-day frozen-dessert class, the longest single session this academy runs.",
      cost:"Ticketed", url:"https://allevents.in/hyderabad/gelatos-and-frozen-desserts/3900030536576306", added:"2026-08-16"},
@@ -1161,17 +1118,7 @@
         /* ================= FAT PIGEON & ROAST CCX, JUBILEE/BANJARA HILLS ================= */
     /* ================= SHILPAKALA VEDIKA & OM CONVENTION, MADHAPUR ================= */
             /* ================= STARTUP & NETWORKING — THE HEADQUARTERS ORBIT, RAIDURG ================= */
-        {date:"2026-08-29", a:"hitech", cat:"startup", name:"The Founder's Room — Hyderabad Startups Club",
-     when:"Sat 29 Aug · 9:30 AM–1:00 PM", where:"The Headquarters Space Orbit, Raidurg",
-     note:"A paid-tier session at the same coworking venue as the Aug 22 networking morning, priced well above it — a members-style room rather than an open mixer.",
-     cost:"₹999–₹9,999", url:"https://allevents.in/hyderabad/the-founders-room-hyderabad-startups-club-tickets/80003300246239", added:"2026-08-16"},
-
-    {date:"2026-08-29", a:"multi", cat:"startup", name:"Pitch Competition — Le Startups Confluence",
-     when:"Sat 29 Aug · 10:00 AM–4:00 PM", where:"The Den, Event Space",
-     note:"A free full-day pitch competition, a different format from the Headquarters Orbit networking mornings.",
-     cost:"Free", free:true, url:"https://allevents.in/hyderabad/pitch-competition-by-le-startups-confluence-tickets/80003549500123", added:"2026-08-16"},
-
-    /* ================= OPEN MIC ================= */
+                /* ================= OPEN MIC ================= */
     {dow:6, a:"multi", cat:"speak", name:"Open Mic — Raw & Real",
      when:"Multiple Saturdays", where:"Locale Cafe & Bistro",
      note:"A standing open floor for stand-up, poetry and music. Thinnest category on this board — worth a direct check next sweep for more rooms like it.",
@@ -1189,17 +1136,7 @@
      note:"A late-night Bollywood-DJ set at the same Kondapur venue as Javed Ali's ghazal evening — a very different register of night out.",
      cost:"Not specified", url:"https://allevents.in/hyderabad/the-emraan-era-ft-emraan-hashmi-and-dj-ganesh/3900030581547100", added:"2026-08-19"},
 
-    {date:"2026-08-28", a:"hitech", cat:"music", name:"Retro Night — ft. DJ Ananth",
-     when:"Fri 28 Aug · 9:00–11:00 PM", where:"Hard Rock Cafe, Hitech City",
-     note:"A new venue for this board — Hard Rock Cafe's own retro night rather than a touring act.",
-     cost:"₹1,500", url:"https://allevents.in/hyderabad/retro-night-ft-dj-ananth/4100030520069622", added:"2026-08-20"},
-
-    {date:"2026-08-30", a:"hitech", cat:"social", name:"SOCIAL Cinema Club — Rang De Basanti",
-     when:"Sun 30 Aug · 7:00–10:00 PM", where:"Mindspace Social, Hitech City",
-     note:"A 20th-anniversary screening at the same Raheja IT Park cafe-bar that runs Quiztastic Nights.",
-     cost:"Not specified", url:"https://allevents.in/hyderabad/social-cinema-club-rang-de-basanti/3900030600627455", added:"2026-08-20"},
-
-    {date:"2026-09-19", a:"hitech", cat:"music", name:"Federal Bank Bharat Surotsav",
+            {date:"2026-09-19", a:"hitech", cat:"music", name:"Federal Bank Bharat Surotsav",
      when:"Sat 19 Sep · 6:00–9:00 PM", where:"Shilpakala Vedika, Madhapur",
      note:"A classical-heritage concert at the city's largest dedicated auditorium, alongside Barkha Ritu on this board's music slate.",
      cost:"Not specified", url:"https://allevents.in/hyderabad/federal-bank-bharat-surotsav/3900030529514133", added:"2026-08-19"},
@@ -1207,22 +1144,7 @@
     /* ================= 17 AUG 2026 SWEEP — NEW FINDS ================= */
 
     /* ================= MUSIC ================= */
-            {date:"2026-08-29", a:"hitech", cat:"music", name:"The August Affair — A Taylor Swift Fan Experience",
-     when:"Sat 29 Aug · 3:00 PM", where:"Underdoggs, Hitech City",
-     note:"A Taylor Swift fan-experience afternoon at the sports bar that already hosts Sunday board games. Expect singalongs and era dressing rather than a live act.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/the-august-affair-a-taylor-swift-fan-experience/3900030521887102", added:"2026-08-17"},
-
-    {date:"2026-08-29", a:"banjara", cat:"music", name:"90s Telugu Hits",
-     when:"Sat 29 Aug · 5:00 PM", where:"Jammin Junction Bar & Kitchen, Jubilee Hills",
-     note:"A 90s-Telugu-songs jamming session with a flat ₹299 ticket at a Jubilee Hills bar. Same venue family that runs the city's Tamil and Hindi jamming nights.",
-     cost:"₹299", url:"https://allevents.in/hyderabad/90s-telugu-hits/4100030567696736", added:"2026-08-17"},
-
-    {date:"2026-08-29", a:"banjara", cat:"music", name:"Anime meets Jazz",
-     when:"Sat 29 Aug · 6:30 PM", where:"Alliance Française de Hyderabad, Banjara Hills",
-     note:"A live jazz ensemble playing anime and video-game themes in the Alliance Française hall. A crossover bill you won't see on the brewery circuit.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/anime-meets-jazz/80001108364953", added:"2026-08-17"},
-
-    /* ================= COMEDY & SHOWS ================= */
+                        /* ================= COMEDY & SHOWS ================= */
             {date:"2026-09-05", a:"banjara", cat:"stage", name:"Mohd Suhel Live",
      when:"Sat 5 Sep · 8:30 PM", where:"Aaromalé, Jubilee Hills",
      note:"Mumbai deadpan comic Mohd Suhel brings his slow-burn observational hour to a Jubilee Hills dinner venue. Runs two nights, 5–6 Sep, at the same 8:30 slot.",
@@ -1250,40 +1172,111 @@
      cost:"₹1,299+", url:"https://www.district.in/events/clay-puzzle-aug1-2026-buy-tickets", added:"2026-08-17"},
 
             /* ================= STARTUP & TECH ================= */
-    {date:"2026-08-29", a:"hitech", cat:"startup", name:"Women in AI Meetup",
-     when:"Sat 29 Aug · 10:00 AM", where:"91springboard, Kondapur",
-     note:"Agentic AI Community's women-focused meetup in a Kondapur coworking space, free to attend. Register on the Meetup page — the group runs these on weekend mornings.",
-     cost:"Free", free:true, url:"https://www.meetup.com/agentic-ai-community-hyderabad/events/316083206/", added:"2026-08-17"},
-
-                {date:"2026-08-26", a:"hitech", cat:"startup", name:"Spider Notebook AI Meetup",
-     when:"Wed 26 Aug · 6:00–8:30 PM", where:"Syncpedia Technologies, Madhapur",
-     note:"A genuine free Wednesday-evening AI meetup — this board's weeknights are otherwise thin, so a real midweek find is worth more than another Saturday listing.",
-     cost:"Free", free:true, url:"https://allevents.in/hyderabad/spider-notebook-ai-meetup-hyderabad/100001994280429449", added:"2026-08-19"},
-
-    {date:"2026-09-19", a:"hitech", cat:"startup", name:"Techcanvass Connect Summit Hyderabad",
+                        {date:"2026-09-19", a:"hitech", cat:"startup", name:"Techcanvass Connect Summit Hyderabad",
      when:"Sat 19 Sep · 9:00 AM", where:"Deccan Serai, HITEC City",
      note:"A business-analytics and technology summit at Deccan Serai — a full-day conference rather than a meetup. Early-registration pricing applies, so book before the September weekend.",
      cost:"Ticketed", url:"https://www.eventbrite.com/e/techcanvass-connect-summit-hyderabad-tickets-1992569827994", added:"2026-08-17"},
 
-    /* ================= SOCIAL ================= */
-    {date:"2026-08-30", a:"hitech", cat:"social", name:"Real Human Connect — Coffee & Conversations",
-     when:"Sun 30 Aug · 2:30 PM", where:"Socialx, Madhapur",
-     note:"A conversation-and-coffee afternoon run by The Coffee Conversations group in Madhapur. No agenda beyond connecting — the social category's most unstructured, lowest-friction option.",
-     cost:"Free", free:true, url:"https://www.meetup.com/thecoffeeconversations/events/316062779/", added:"2026-08-17"},
+    /* ===== added 1 Sep — big batch via fetch-candidates.js ===== */
+    {date:"2026-09-04", a:"hitech", cat:"games", name:"Gyaan Guru Quizzing — The Culture Quiz",
+     when:"Fri 4 Sep", where:"Mindspace Social, Hitech City",
+     note:"A culture-themed general-knowledge quiz at the same Raheja IT Park venue that runs Quiztastic Nights.",
+     cost:"₹299", url:"https://www.district.in/events/gyaan-guru-quizzing-the-culture-quiz-mindspace-social-sep4-2026-buy-tickets", added:"2026-09-01"},
 
-    /* ================= OPEN MIC & POETRY ================= */
-                /* ================= RUNS & OUTDOORS ================= */
-        {date:"2026-08-29", a:"multi", cat:"outdoors", name:"Ride to Kadthal Forest — Camping & Rappelling",
-     when:"Sat 29 Aug · 1:30 PM departure", where:"Mehdipatnam, Hyderabad",
-     note:"A day-and-camp trip combining forest ride, rappelling and overnight camping out of Mehdipatnam. Same ClimbOn club as the Friday trek, listed as a separate weekend departure.",
-     cost:"Ticketed", url:"https://www.meetup.com/theclimbon/events/315482429/", added:"2026-08-17"},
+    {date:"2026-09-06", a:"hitech", cat:"startup", name:"Dai-Sun — Nakamakai",
+     when:"Sun 6 Sep", where:"Draper Startup House, Gachibowli",
+     note:"A founder mixer at Gachibowli's Draper Startup House outpost, priced like a real event rather than a free walk-in.",
+     cost:"₹350–₹450", url:"https://allevents.in/hyderabad/dai-sun-by-nakamakai/4100030609323942", added:"2026-09-01"},
 
-    /* ================= WELLNESS ================= */
-        /* ================= BOARD GAMES ================= */
-    {date:"2026-08-29", a:"banjara", cat:"games", name:"Coffee, Comedy, Board Games & More — GladWeMet",
-     when:"Sat 29 Aug · 7:00 PM", where:"Banjara Hills Road No 12",
-     note:"GladWeMet's Banjara Hills evening mixing board games, an open comedy bit and coffee. Free RSVP on Meetup — the cheapest games slot outside the brewery covers.",
-     cost:"Free", free:true, url:"https://www.meetup.com/hyderabad-wanderers-club/events/315440986/", added:"2026-08-17"}
+    {date:"2026-09-05", a:"hitech", cat:"startup", name:"Global Startups Club — Networking Hyderabad",
+     when:"Sat 5 Sep · 10:30 AM", where:"The Headquarters Orbit, Raidurg",
+     note:"Same monthly networking-morning format as the Aug 22 edition already on this board, at the same venue and price — a new date, not a new event.",
+     cost:"₹475", url:"https://allevents.in/hyderabad/global-startups-club-l-startup-networking-hyderabad-2026-tickets/80002390589930", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"hitech", cat:"music", name:"Weekend Jamming With Safar",
+     when:"Sat 5 Sep", where:"Amnesia Sky Bar, Madhapur",
+     note:"A weekend live-music jam at the same Madhapur bar that runs the Bollywood jamming nights.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/weekend-jamming-with-safar/3900030603445436", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"hitech", cat:"music", name:"Tribute to Queen — Lusty Angels",
+     when:"Sat 5 Sep", where:"Hard Rock Cafe, Hitech City",
+     note:"A Queen tribute set at the same Hard Rock outpost as the Retro Night DJ evening.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/tribute-to-queen-ft-lusty-angels/3900030617892915", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"hitech", cat:"stage", name:"Daniel Fernandes — Do You Know Who I Am?",
+     when:"Sat 19 Sep", where:"The Comedy Theatre, Gachibowli",
+     note:"A touring solo hour at Gachibowli's dedicated comedy room.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/daniel-fernandes-do-you-know-who-i-am/3900030623740459", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"hitech", cat:"stage", name:"Cry Daddy — Anirban Dasgupta",
+     when:"Sat 19 Sep", where:"KLN Prasad Auditorium, FTCCI",
+     note:"A solo hour at the seminar-hall venue rather than Gachibowli's usual comedy-club rooms.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/cry-daddy-by-anirban-dasgupta/3900030397612509", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"hitech", cat:"stage", name:"Evolution — Arvind Sunder",
+     when:"Sun 6 Sep", where:"The Comedy Theatre, Gachibowli",
+     note:"A Sunday-evening solo set at the same room as Daniel Fernandes' show later in the month.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/evolution-by-arvind-sunder/3900030595853048", added:"2026-09-01"},
+
+    {date:"2026-09-13", a:"hitech", cat:"stage", name:"Namak Kam Hai — Vidit Sharma",
+     when:"Sun 13 Sep", where:"The Comedy Theatre, Gachibowli",
+     note:"Another Sunday solo hour at Gachibowli's comedy room — this venue now runs something most weekends.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/namak-kam-hai-by-vidit-sharma/3900030386805011", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"banjara", cat:"food", name:"Tiramisu",
+     when:"Sat 12 Sep", where:"100 Folds Academy, Jubilee Hills",
+     note:"A single-dessert baking class — narrower in scope than the academy's full-day courses.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/tiramisu/3900030536895107", added:"2026-09-01"},
+
+    {date:"2026-09-26", a:"banjara", cat:"food", name:"Fresh Fruit Gateaux",
+     when:"Sat 26 Sep", where:"100 Folds Academy, Jubilee Hills",
+     note:"A fruit-and-sponge cake class, the academy's third distinct format on this board alongside Tiramisu and the earlier Gourmet Cookies.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/fresh-fruit-gateaux/3900030557854754", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"banjara", cat:"craft", name:"Resin Art Workshop",
+     when:"Sat 5 Sep", where:"Makobrew World Coffee Bar, Jubilee Hills",
+     note:"A resin-casting session at a Jubilee Hills coffee bar rather than a dedicated craft studio.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/resin-art-workshop/3900030622296832", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"hitech", cat:"craft", name:"Kintsugi — The Art of the Beautiful Break",
+     when:"Sat 19 Sep", where:"Ruth's Cafe, Gachibowli",
+     note:"The Japanese gold-repair technique taught as a real workshop, not just a metaphor — a genuine first for this board's craft slate.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/kintsugi-the-art-of-the-beautiful-break/3900030612342703", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"hitech", cat:"craft", name:"Color Therapy — Mandala Art",
+     when:"Sun 6 Sep", where:"La Vie En Rose Cafe & Bistro, Gachibowli",
+     note:"A guided mandala session framed around colour therapy rather than a plain painting class.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/color-therapy-mandala-art/3900030606744722", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"hitech", cat:"craft", name:"Crochet & Coffee — Hands-On Workshop",
+     when:"Sat 5 Sep", where:"Third Wave Coffee, Khajaguda",
+     note:"A beginner crochet class at a cafe near the Khajaguda–Nanakramguda stretch.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/crochet-and-coffee-hands-on-workshop/3900030631022152", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"hitech", cat:"craft", name:"Tanjore Art Experience",
+     when:"Sat 12 Sep", where:"Kshana Coffee, Madhapur",
+     note:"Traditional Tanjore-style gold-leaf painting, taught at a Madhapur cafe near Durgam Cheruvu.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/tanjore-art-experience/3900030631204628", added:"2026-09-01"},
+
+    {date:"2026-09-13", a:"hitech", cat:"wellness", name:"Dhyan Sangeet — Meditation With Prateek Chaitanya",
+     when:"Sun 13 Sep", where:"KLN Prasad Auditorium, FTCCI",
+     note:"A guided meditation-and-music session, the board's second wellness entry alongside the Tantra workshop's slot.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/dhyan-sangeet-meditation-with-prateek-chaitanya/3900030566587837", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"banjara", cat:"wellness", name:"Free Meditation Training Program",
+     when:"Sat 5 Sep", where:"Srinagar Colony, Banjara Hills",
+     note:"A genuinely free meditation programme — rare on a wellness slate that's mostly paid workshops.",
+     cost:"Free", free:true, url:"https://allevents.in/hyderabad/free-meditation-training-program-hyderabad-india/200030582103940", added:"2026-09-01"},
+
+    {date:"2026-10-04", a:"hitech", cat:"outdoors", name:"Run for Child Health 2026",
+     when:"Sun 4 Oct", where:"Gachibowli Stadium",
+     note:"A charity community run at the same stadium as the Royal Stag BoomBox festival and Mana Run.",
+     cost:"₹699–₹999", url:"https://allevents.in/hyderabad/run-for-child-health-2026-tickets/80003514888772", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"banjara", cat:"speak", name:"Sunrise Book Walk — Read, Reflect & Discuss",
+     when:"Sun 6 Sep", where:"KBR National Park, Jubilee Hills",
+     note:"An early-morning reading-and-walking group inside the national park — a genuinely different format from the board's comedy-club open mics.",
+     cost:"Not specified", url:"https://allevents.in/hyderabad/sunrise-book-walk-—-read-reflect-and-discuss-tickets/80005068559749", added:"2026-09-01"},
   ];
 
   var CLASSES = [

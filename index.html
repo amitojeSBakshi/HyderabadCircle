@@ -8,7 +8,7 @@
 <meta name="description" content="Hyderabad Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260908-190656-3303">
+<meta name="build" content="20260909-191408-1981">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -902,13 +902,14 @@
      NOW (below, once iso() exists) is the reader's real date, and it decides what is
      still ahead of them. That is what stops a link shared in July from still offering
      you a 29 July show in September. */
-  var TODAY = "2026-09-09";      // refresh marker — bump on every update
+  var TODAY = "2026-09-10";      // refresh marker — bump on every update
   var BASELINE = "2026-08-16";   // initial load; entries from this date are not "new"
   var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
 
   var CATS = [
     {k:"games",    label:"Board games & quiz", tone:"--c-games"},
     {k:"startup",  label:"Startup & business", tone:"--c-startup"},
+    {k:"ai",       label:"AI & tech", tone:"--c-ai"},
     {k:"craft",    label:"Arts & craft",  tone:"--c-craft"},
     {k:"music",    label:"Music & jams",  tone:"--c-music"},
     {k:"stage",    label:"Comedy & shows",tone:"--c-stage"},
@@ -980,6 +981,7 @@
     "Draper Startup House, Gachibowli":[17.44362,78.35196,2],
     "DraperU India, Gachibowli":[17.44362,78.35196,2],
     "Entain India, Financial District":[17.40425,78.33052,2],
+    "EPAM, Knowledge City, Raidurg":[17.41417,78.39072,2],
     "Fat Pigeon — Bar Hop, Jubilee Hills":[17.43084,78.41029,2],
     "Gachibowli Stadium":[17.44941,78.34847,1],
     "Gipi\u0027s Pizza House \u0026 Cafe, Himayath Nagar":[17.39848,78.48647,2],
@@ -992,8 +994,11 @@
     "KBR National Park, Jubilee Hills":[17.42029,78.42046,1],
     "Kshana Coffee, Madhapur":[17.44089,78.39163,2],
     "La Vie En Rose Cafe \u0026 Bistro, Gachibowli":[17.44362,78.35196,2],
+    "Lake Shore Mall, Kukatpally":[17.49308,78.40544,2],
     "Lamakaan, Banjara Hills":[17.42091,78.44736,1],
     "Le Méridien Hyderabad, Gachibowli":[17.44974,78.36347,1],
+    "Locale Cafe \u0026 Bistro, Madhapur":[17.44089,78.39163,2],
+    "LSEG, International Tech Park, Madhapur":[17.44089,78.39163,2],
     "LSEG, Madhapur":[17.44089,78.39163,2],
     "Makobrew World Coffee Bar, Jubilee Hills":[17.43084,78.41029,2],
     "Mehdipatnam, Hyderabad":[17.39426,78.43425,1],
@@ -1005,6 +1010,8 @@
     "Odeum By Prism, Financial District":[17.40425,78.33052,2],
     "Om Convention, Hyderabad":[17.41461,78.39558,1],
     "Om Convention, Narsingi":[17.41461,78.39558,1],
+    "Petrol Pump, Tirumalgiri X Roads":[17.37335,78.41107,1],
+    "Phoenix Arena, Hitech City":[17.46969,78.38515,2],
     "Purefuel Health \u0026 Wellbeing, Financial District":[17.40425,78.33052,2],
     "Pushpa Enterprises, Gowliguda":[17.37764,78.47877,2],
     "Quake Arena, Kondapur":[17.45879,78.37306,2],
@@ -1016,6 +1023,7 @@
     "Ruth\u0027s Cafe, Gachibowli":[17.44362,78.35196,2],
     "S S Convention Centre, Shamshabad":[17.25721,78.34510,2],
     "Sanjeevaiah Children’s Park, Hussain Sagar":[17.42291,78.47542,2],
+    "Sanjeevaiah Park, Hussain Sagar":[17.43201,78.47580,1],
     "SAS iTower, Khajaguda":[17.41722,78.36561,2],
     "Seeneemaa Spot, Khajaguda":[17.41722,78.36561,2],
     "Shilpakala Vedika, Madhapur":[17.45141,78.37938,1],
@@ -1147,7 +1155,7 @@
             {date:"2026-09-19", a:"hitech", cat:"music", name:"Federal Bank Bharat Surotsav",
      when:"Sat 19 Sep · 6:00–9:00 PM", where:"Shilpakala Vedika, Madhapur",
      note:"A classical-heritage concert at the city's largest dedicated auditorium, alongside Barkha Ritu on this board's music slate.",
-     cost:"Not specified", url:"https://allevents.in/hyderabad/federal-bank-bharat-surotsav/3900030529514133", added:"2026-08-19"},
+     cost:"₹999+", url:"https://allevents.in/hyderabad/federal-bank-bharat-surotsav/3900030529514133", added:"2026-08-19"},
 
     /* ================= 17 AUG 2026 SWEEP — NEW FINDS ================= */
 
@@ -1177,9 +1185,9 @@
 
             /* ================= STARTUP & TECH ================= */
                         {date:"2026-09-19", a:"hitech", cat:"startup", name:"Techcanvass Connect Summit Hyderabad",
-     when:"Sat 19 Sep · 9:00 AM", where:"Deccan Serai, HITEC City",
+     when:"Sat 19 Sep · 9:00 AM–2:15 PM", where:"Deccan Serai, HITEC City",
      note:"A business-analytics and technology summit at Deccan Serai — a full-day conference rather than a meetup. Early-registration pricing applies, so book before the September weekend.",
-     cost:"Ticketed", url:"https://www.eventbrite.com/e/techcanvass-connect-summit-hyderabad-tickets-1992569827994", added:"2026-08-17"},
+     cost:"Registration required", url:"https://www.eventbrite.com/e/techcanvass-connect-summit-hyderabad-tickets-1992569827994", added:"2026-08-17"},
 
     /* ===== added 1 Sep — big batch via fetch-candidates.js ===== */
 
@@ -1248,7 +1256,7 @@
      note:"The following Sunday’s eChai open house gives anyone who misses the first edition a second entry point. The same easy format works well for meeting builders without a pitch-heavy agenda.",
      cost:"Free", free:true, url:"https://echai.ventures/events/echai-s-startup-open-house-in-hyderabad-sep-20-2026", added:"2026-09-08"},
 
-    {date:"2026-09-25", a:"hitech", cat:"startup", name:"AI Builders Meetup — Hyderabad",
+    {date:"2026-09-25", a:"hitech", cat:"ai", name:"AI Builders Meetup — Hyderabad",
      when:"Fri 25 Sep · 4:00–6:00 PM", where:"CIE at IIIT Hyderabad, Gachibowli",
      note:"Founders and engineers compare what is working in AI products, agents, pipelines and inference economics. Nearly 50 people are already listed, making this a credible Friday technical room rather than a thin meetup.",
      cost:"Free", free:true, url:"https://echai.ventures/events/ai-builders-meetup-hyderabad-edition-sep-25-2026", added:"2026-09-08"},
@@ -1286,7 +1294,7 @@
     {date:"2026-09-19", a:"hitech", cat:"music", name:"A Night for Arijit Singh — Root Three Five",
      when:"Sat 19 Sep · 9:00–11:00 PM", where:"Hard Rock Cafe, Hitech City",
      note:"Root Three Five build a two-hour set around Arijit Singh’s catalogue at the Hitech City Hard Rock. It is a smaller live-band alternative to the same weekend’s large concert-hall shows.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/a-night-for-arijit-singh-ft-root-three-five/3900030631663958", added:"2026-09-08"},
+     cost:"₹249", url:"https://allevents.in/hyderabad/a-night-for-arijit-singh-ft-root-three-five/3900030631663958", added:"2026-09-08"},
 
     {date:"2026-09-19", a:"multi", cat:"music", name:"Rampally Live — Sam Hindi Acoustic Night",
      when:"Sat 19 Sep · 8:00–11:00 PM", where:"Rampally Hi-Street, Nagaram, Secunderabad", mt:"Blue · Uppal, then cab",
@@ -1331,7 +1339,7 @@
     {date:"2026-10-02", a:"central", cat:"music", name:"Bhajan Mahotsav",
      when:"Fri 2 Oct · 6:30–9:30 PM", where:"Ravindra Bharathi, Saifabad", mt:"Red · Lakdi-ka-pul",
      note:"A three-hour devotional-music programme at one of Hyderabad’s central cultural auditoriums. It gives Friday evening a traditional option outside the Hitech City nightlife circuit.",
-     cost:"Ticketed", url:"https://allevents.in/hyderabad/bhajan-mahotsav/3900030666063423", added:"2026-09-08"},
+     cost:"₹500+", url:"https://allevents.in/hyderabad/bhajan-mahotsav/3900030666063423", added:"2026-09-08"},
 
     {date:"2026-10-03", a:"hitech", cat:"startup", name:"Global Startups Club — Hyderabad Networking",
      when:"Sat 3 Oct · 10:30 AM–1:30 PM", where:"The Headquarters Orbit, Knowledge City",
@@ -1449,7 +1457,7 @@
      note:"The public weekly programme combines silent meditation, devotional chanting and an inspirational reading at the long-running YSS centre. It gives the board a dependable Thursday wellness practice instead of another single weekend workshop.",
      cost:"Open to public", url:"https://yssofindia.org/location/hyderabad", added:"2026-09-09"},
 
-    {date:"2026-09-12", a:"hitech", cat:"startup", name:"OWASP Hyderabad — September Meetup",
+    {date:"2026-09-12", a:"hitech", cat:"ai", name:"OWASP Hyderabad — September Meetup",
      when:"Sat 12 Sep · 9:30 AM–1:00 PM", where:"Cohere Health, Orbit Knowledge City",
      note:"Practitioners cover AI-agent attacks, sensitive-data protection and SaaS security architecture across three technical sessions. The chapter lists 150 attendees, with final entry subject to its confirmation email and government-ID check.",
      cost:"Free RSVP · confirmation required", free:true, url:"https://www.meetup.com/hyderabad-owasp-meetup-group/events/316427703/", added:"2026-09-09"},
@@ -1459,20 +1467,68 @@
      note:"ProductTank examines how AI is shifting product work toward hands-on prototyping, testing and delivery. The discussion is built for product managers, designers, founders and engineering leaders, with 67 people already listed.",
      cost:"Free RSVP", free:true, url:"https://www.meetup.com/producttank-hyderabad/events/316369171/", added:"2026-09-09"},
 
-    {date:"2026-09-26", a:"hitech", cat:"startup", name:"MongoDB Atlas Vector Search Meetup",
+    {date:"2026-09-26", a:"hitech", cat:"ai", name:"MongoDB Atlas Vector Search Meetup",
      when:"Sat 26 Sep · 10:00 AM–3:00 PM", where:"Entain India, Financial District",
      note:"MongoDB’s Hyderabad user group works through embeddings, semantic search, vector-search architecture and quantisation. More than 275 attendees are listed, making this one of the month’s strongest developer-community rooms.",
      cost:"Free RSVP", free:true, url:"https://www.meetup.com/mongodb-usergroup-hyderabad/events/316348822/", added:"2026-09-09"},
 
     {date:"2026-09-12", a:"hitech", cat:"outdoors", name:"CoKarma Run Club — Lap 06",
-     when:"Sat 12 Sep · 6:30–9:30 AM", where:"CoKarma, Kokapet",
+     when:"Sat 12 Sep · 6:30 AM onwards", where:"CoKarma, Kokapet",
      note:"CoKarma and Sweatclub bring runners, founders and creators together for an all-paces morning run. Walkers, joggers and faster runners share the same start, so it works as a community session rather than a timed race.",
      cost:"Free registration", free:true, url:"https://www.meetup.com/cokarma-hyderabad-startup-network/events/316382209/", added:"2026-09-09"},
 
     {date:"2026-09-19", a:"multi", cat:"music", name:"Micless with Merakee",
-     when:"Sat 19 Sep · 5:00–9:00 PM", where:"SHOTT, Lakeshore Mall, Kukatpally", mt:"Red · KPHB Colony",
+     when:"Sat 19 Sep · 5:00–9:00 PM", where:"Lake Shore Mall, Kukatpally", mt:"Red · KPHB Colony",
      note:"Merakee turns a Telugu live set into a mass sing-along where the crowd supplies the lead voice. The family-friendly four-hour format has grown from a small jam into one of Hyderabad’s most distinctive participatory music events.",
-     cost:"₹399+", url:"https://in.bookmyshow.com/events/micless-with-merakee/ET00515879", added:"2026-09-09"}
+     cost:"₹399+", url:"https://in.bookmyshow.com/events/micless-with-merakee/ET00515879", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"hitech", cat:"ai", name:"Train Models to Think Better — SFT to RL",
+     when:"Sat 12 Sep · 9:00 AM–12:30 PM", where:"LSEG, International Tech Park, Madhapur",
+     note:"AIYatra works from supervised fine-tuning with LoRA through preference learning and reinforcement learning with rewards. The hands-on room requires both a Meetup RSVP and the linked security form.", cost:"Registration required", url:"https://www.meetup.com/aiyatra/events/316434319/", added:"2026-09-10"},
+
+    {date:"2026-09-27", a:"hitech", cat:"ai", name:"Apache Kafka Meetup — Hyderabad",
+     when:"Sun 27 Sep · 10:30 AM–2:30 PM", where:"EPAM, Knowledge City, Raidurg",
+     note:"Confluent’s Hyderabad community runs three stream-processing sessions with a break and networking lunch at EPAM. The in-person programme gives the new AI and tech category a data-infrastructure counterweight.", cost:"Registration required", url:"https://www.meetup.com/hyderabad-kafka/events/316454071/", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"hitech", cat:"speak", name:"Madhapur Toastmasters Meeting #398",
+     when:"Sat 12 Sep · 10:20 AM–12:30 PM", where:"91springboard, Kondapur",
+     note:"Prepared speeches, impromptu Table Topics and structured evaluations make this a practical public-speaking room. Guests can observe the full meeting for ₹200 and may volunteer for a short speaking slot.", cost:"₹200", url:"https://www.meetup.com/madhapurtm/events/316235855/", added:"2026-09-10"},
+
+    {date:"2026-09-20", a:"multi", cat:"outdoors", name:"Shamirpet Forest Hike & Rock Climbing",
+     when:"Sun 20 Sep · 6:00–10:30 AM", where:"Petrol Pump, Tirumalgiri X Roads", mt:"Green · JBS Parade Ground, then cab",
+     note:"ClimbOn leads a beginner-friendly forest hike with bouldering and chimney-climbing practice near Shamirpet. The group meets at Tirumalgiri for the five-hour outing, and only a few seats remain.", cost:"₹250", url:"https://www.meetup.com/theclimbon/events/316054731/", added:"2026-09-10"},
+
+    {date:"2026-09-18", a:"hitech", cat:"games", name:"Gyaan Guru — The Desi Indian Quiz",
+     when:"Fri 18 Sep · 8:00–10:00 PM", where:"Mindspace Social, Hitech City",
+     note:"A hosted team quiz moves through Indian pop culture, music, films and current affairs at Mindspace Social. The Friday-night format adds a real weekday games option beside the board’s weekend rooms.", cost:"₹299", url:"https://www.district.in/events/gyaan-guru-quizzing-the-desi-indian-quiz-sep18-2026-buy-tickets", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"hitech", cat:"social", name:"Strangers Meetup — Madhapur",
+     when:"Sat 12 Sep · 7:00–9:00 PM", where:"Locale Cafe & Bistro, Madhapur",
+     note:"A facilitated two-hour cafe meetup is built specifically for people arriving without an existing group. Tiered tickets cover different participation formats, so the exact option should be checked before booking.", cost:"₹199–₹699", url:"https://allevents.in/secunderabad/strangers-meetup/4100030677453633", added:"2026-09-10"},
+
+    {date:"2026-09-11", a:"hitech", cat:"music", name:"Dhanunjay Seepana Live",
+     when:"Fri 11 Sep · 8:00 PM", where:"Heart Cup Coffee, Gachibowli",
+     note:"Telugu playback singer Dhanunjay Seepana takes the Gachibowli cafe stage for a Friday live set. It adds a local-language music option on a night otherwise led by comedy and networking.", cost:"₹299+", url:"https://allevents.in/hyderabad/dhanunjay-seepana/3900030583359749", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"hitech", cat:"music", name:"KASYAP Live at Heart Cup Coffee",
+     when:"Sat 12 Sep · 8:30 PM", where:"Heart Cup Coffee, Gachibowli",
+     note:"KASYAP brings a separate Saturday-night live set to Heart Cup Coffee after Dhanunjay’s Friday booking. The exact listing has drawn strong interest and confirms the Gachibowli venue.", cost:"Ticketed", url:"https://allevents.in/hyderabad/kasyap-live-at-hcc-gachibowli/3900030669062130", added:"2026-09-10"},
+
+    {date:"2026-09-26", a:"hitech", cat:"music", name:"Agomoni — Phoenix Arena",
+     when:"Sat 26 Sep · 6:00 PM", where:"Phoenix Arena, Hitech City",
+     note:"Agomoni brings a Bengali cultural evening to the Phoenix Arena ahead of the Puja season. It gives the music calendar a community programme that is distinct from club gigs and tribute concerts.", cost:"Ticketed", url:"https://allevents.in/hyderabad/agomoni/3900030638908658", added:"2026-09-10"},
+
+    {date:"2026-10-24", a:"banjara", cat:"food", name:"Entremets — Black Forest Revisited",
+     when:"Sat 24 Oct · 10:00 AM–2:00 PM", where:"100 Folds Academy, Jubilee Hills",
+     note:"The four-hour class rebuilds Black Forest as a modern layered entremet rather than a standard sponge cake. It extends the academy’s dated programme into late October with a more advanced format.", cost:"Ticketed", url:"https://allevents.in/hyderabad/entremets-making-black-forest-revisited/3900030657722931", added:"2026-09-10"},
+
+    {date:"2026-10-31", a:"banjara", cat:"food", name:"Classic Tarts — 100 Folds Academy",
+     when:"Sat 31 Oct · 10:00 AM–1:00 PM", where:"100 Folds Academy, Jubilee Hills",
+     note:"A three-hour tart class closes the academy’s October programme with pastry structure, fillings and finishing. It is a different technique from the gateaux and plated-dessert sessions already listed.", cost:"Ticketed", url:"https://allevents.in/hyderabad/classic-tarts/3900030656661107", added:"2026-09-10"},
+
+    {date:"2027-02-07", a:"central", cat:"outdoors", name:"Hare Krishna Run 2027 — Second Edition",
+     when:"Sun 7 Feb 2027 · 5:00–6:00 AM", where:"Sanjeevaiah Park, Hussain Sagar",
+     note:"The second Hare Krishna Run offers multiple race distances from Sanjeevaiah Park at sunrise. It is far ahead, but the exact ticket page and tiered prices are already live for runners planning their season.", cost:"₹699–₹1,099", url:"https://allevents.in/hyderabad/hare-krishna-run-2027-2nd-edition-tickets/80001888300347", added:"2026-09-10"}
   ];
 
   var CLASSES = [

@@ -8,7 +8,7 @@
 <meta name="description" content="Hyderabad Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260915-105857-4529">
+<meta name="build" content="20261007-190356-4274">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -902,7 +902,7 @@
      NOW (below, once iso() exists) is the reader's real date, and it decides what is
      still ahead of them. That is what stops a link shared in July from still offering
      you a 29 July show in September. */
-  var TODAY = "2026-09-15";      // refresh marker — bump on every update
+  var TODAY = "2026-10-08";      // refresh marker — bump on every update
   var BASELINE = "2026-08-16";   // initial load; entries from this date are not "new"
   var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
 
@@ -918,7 +918,9 @@
     {k:"social",   label:"Social",        tone:"--c-social"},
     {k:"outdoors", label:"Runs & outdoors", tone:"--c-outdoors"},
     {k:"wellness", label:"Yoga & wellness",  tone:"--c-wellness"},
-    {k:"food",     label:"Food & dining", tone:"--c-food"}
+    {k:"food",     label:"Food & dining", tone:"--c-food"},
+    {k:"expo", label:"Expos & fairs", tone:"--c-expo"},
+    {k:"books", label:"Books & ideas", tone:"--c-books"}
   ];
   var CATMAP = {}; CATS.forEach(function(c){ CATMAP[c.k] = c; });
 
@@ -993,6 +995,7 @@
     "Fat Pigeon — Bar Hop, Jubilee Hills":[17.43084,78.41029,2],
     "FTCCI, Lakdikapul":[17.40388,78.46427,2],
     "Gachibowli Stadium":[17.44941,78.34847,1],
+    "Gachibowli, Hyderabad, Telangana, India":[17.44362,78.35196,1],
     "Garage Moto Cafe, Jubilee Hills":[17.43084,78.41029,2],
     "Gipi\u0027s Pizza House \u0026 Cafe, Himayath Nagar":[17.39848,78.48647,2],
     "Goethe-Zentrum Hyderabad, Banjara Hills":[17.41775,78.43990,2],
@@ -1000,11 +1003,17 @@
     "Hard Rock Cafe, Hitech City":[17.46969,78.38515,2],
     "Heart Cup Coffee, Gachibowli":[17.45971,78.36865,1],
     "HITEC City, Hyderabad":[17.44901,78.38314,1],
+    "hitex":[17.47081,78.37491,1],
+    "HITEX EXHIBITION CENTER":[17.47156,78.37513,1],
     "HITEX Exhibition Center, Hitech City":[17.47156,78.37513,1],
     "Hotel Deccan Serai Grande, Gachibowli":[17.44362,78.35196,2],
     "Hyatt Place, Banjara Hills":[17.41775,78.43990,2],
+    "HYDERABAD INTERNATIONAL CONVENTION CENTRE-HICC, Izzathnagar, Kothaguda, Hyderabad, Telangana, India":[17.41445,78.45952,2],
+    "Indian School of Business":[17.43521,78.33944,1],
+    "Indian School of Business ,Hyderabad":[17.43521,78.33944,1],
     "Indian School of Business, Gachibowli":[17.43521,78.33944,1],
     "Jammin Junction Bar \u0026 Kitchen, Jubilee Hills":[17.43084,78.41029,2],
+    "Kalyana Lakshmi Gardens: Hyderabad":[17.37846,78.56734,1],
     "KBR National Park, Jubilee Hills":[17.42029,78.42046,1],
     "Kshana Coffee, Madhapur":[17.44089,78.39163,2],
     "La Vie En Rose Cafe \u0026 Bistro, Gachibowli":[17.44362,78.35196,2],
@@ -1025,6 +1034,7 @@
     "Nampally Railway Station, Hyderabad":[17.39240,78.47015,1],
     "NanoSpace Coworking, Nanakramguda":[17.42178,78.33798,2],
     "Native South, Gandipet":[17.40425,78.33052,2],
+    "Necklace Road Railway Station, Hussain Sagar, Khairtabad, Hyderabad, Telangana":[17.42334,78.46319,1],
     "Novotel Hyderabad Convention Centre, Hitech City":[17.46973,78.38524,2],
     "Odeum By Prism, Financial District":[17.40425,78.33052,2],
     "Om Convention, Hyderabad":[17.41461,78.39558,1],
@@ -1033,6 +1043,7 @@
     "Petrol Pump, Tirumalgiri X Roads":[17.37335,78.41107,1],
     "Phoenix Arena, Hitech City":[17.46969,78.38515,2],
     "Priya Hyderabad, Financial District":[17.40425,78.33052,2],
+    "Public Garden Road":[17.39684,78.47108,1],
     "Purefuel Health \u0026 Wellbeing, Financial District":[17.40425,78.33052,2],
     "Pushpa Enterprises, Gowliguda":[17.37764,78.47877,2],
     "QHub, Madhapur":[17.44089,78.39163,2],
@@ -1050,17 +1061,20 @@
     "SAS iTower, Khajaguda":[17.41722,78.36561,2],
     "Seeneemaa Spot, Khajaguda":[17.41722,78.36561,2],
     "Shilpakala Vedika, Madhapur":[17.45141,78.37938,1],
+    "Shilpakala Vedika: Hyderabad":[17.45141,78.37938,1],
     "SHOTT, Lakeshore Mall, Kukatpally":[17.49308,78.40544,2],
     "Socialx, Madhapur":[17.44089,78.39163,2],
     "Sri Infinity Convention, Manikonda":[17.40000,78.38617,2],
     "Srinagar Colony, Banjara Hills":[17.43089,78.42817,1],
     "Statue of Equality, Shamshabad":[17.25721,78.34510,2],
     "Syncpedia Technologies, Madhapur":[17.44089,78.39163,2],
+    "Taj Deccan":[17.41847,78.45062,1],
     "The Comedy Theatre, Gachibowli":[17.44362,78.35196,2],
     "The Headquarters Orbit, Knowledge City":[17.43379,78.38140,2],
     "The Headquarters Orbit, Raidurg":[17.41417,78.39072,2],
     "The Headquarters Space Orbit, Raidurg":[17.41417,78.39072,2],
     "The Hoppery, Durgam Cheruvu":[17.43006,78.39114,1],
+    "THE PARK HYDERABAD":[17.42372,78.46215,1],
     "The Street Comedy Club, Madhapur":[17.44089,78.39163,2],
     "The Street Drive In, Jawahar Nagar":[17.40766,78.49280,2],
     "Third Wave Coffee, Banjara Hills":[17.41775,78.43990,2],
@@ -1092,469 +1106,155 @@
   /* a: see AREAS   cat: see CATS   dow: 0-6 weekly recurring
      date: "YYYY-MM-DD" one-off   mt: override the TRANSIT station */
   var E = [
-    {dow:0, a:"hitech", cat:"games", name:"Board Games Afternoon",
-     when:"Every Sunday, all day", where:"Underdoggs, Hitech City",
-     note:"A standing Sunday board-games room at one of Hitech City's best-known sports bars — turn up solo and get folded into a table.", cost:"₹200 onwards", url:"https://www.district.in/events/board-games-afternoon-aug16-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"hitech", cat:"games", name:"Board Games Meetup — Hyderabad",
-     when:"Every Saturday & Sunday, all day", where:"Red Rhino, Hitech City",
-     note:"A craft-brewery board-games room running both weekend days — the ₹199 cover is redeemable against food and drink, not just an entry fee.", cost:"₹199 onwards", url:"https://www.district.in/events/board-games-meetup-hyderabad-mar14-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:0, a:"hitech", cat:"stage", name:"Laughter Therapy",
-     when:"Every Saturday & Sunday · 6:00–7:00 PM", where:"Red Rhino, Hitech City",
-     note:"A guided laughter-yoga hour rather than a stand-up show — the cheapest recurring room on this board.", cost:"₹199 onwards", url:"https://www.district.in/events/laughter-therapy-hyderabad-mar14-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:0, a:"multi", cat:"games", name:"Hyderabad Board Gamers' Club",
-     when:"Every Sunday · 16+", where:"Venue shared with registered attendees",
-     note:"Heavy on Blood on the Clocktower. On-time arrivals get seating priority — this fills up.", cost:"₹500 cover, redeemable on food & drinks", url:"https://www.instagram.com/hydbgclub/", added:"2026-08-16"},
-
-    {date:"2026-09-20", a:"hitech", cat:"stage", name:"Office Chugli — Crowd Work Show",
-     when:"Sun 20 Sep · 3:30 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"A crowd-work format rather than scripted sets — the room reads the audience instead of the other way round.", cost:"₹399", url:"https://www.district.in/events/office-chugli-standup-comedy-crowd-work-show-sep20-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"central", cat:"craft", name:"Clay Trinket Workshop",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"A beginner clay session at the venue currently carrying this board's whole central-Hyderabad craft programme — one of nine distinct workshops it runs.", cost:"₹899+", url:"https://www.district.in/events/clay-trinket-workshop-aug1-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"central", cat:"craft", name:"Pichwai Painting Workshop",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"Traditional Rajasthani devotional painting, taught beginner to advanced — a different craft from the venue's clay sessions.", cost:"₹999+", url:"https://www.district.in/events/pichwai-painting-workshop-aug1-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"central", cat:"craft", name:"Fluid Canvas Art",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"Acrylic pour painting — a take-home canvas rather than a wheel or brush-control session.", cost:"₹999+", url:"https://www.district.in/events/fluid-canvas-art-aug1-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"central", cat:"craft", name:"Fridge Clay Magnet Workshop",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"The cheapest recurring craft slot on this board — a small take-home piece rather than a full session.", cost:"₹699+", url:"https://www.district.in/events/fridge-clay-magnet-workshop-aug1-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"central", cat:"craft", name:"Mirror Painting",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"Reverse-glass mirror art, one of the venue's less common formats.", cost:"₹899+", url:"https://www.district.in/events/mirror-painting-aug1-2026-buy-tickets", added:"2026-08-16"},
-
-    {dow:6, a:"central", cat:"craft", name:"Couple Clay Keychain",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"A two-person format built for a date rather than a solo craft session.", cost:"₹999+", url:"https://www.district.in/events/couple-clay-keychain-aug1-2026-buy-tickets", added:"2026-08-16"},
-
-    {date:"2026-09-19", a:"banjara", cat:"food", name:"Decadant Desserts",
-     when:"Sat 19 Sep · 10:00 AM–1:00 PM", where:"100 Folds Academy, Jubilee Hills",
-     note:"A plated-dessert class at the same academy as Gourmet Cookies and Gelatos and Frozen Desserts.", cost:"Ticketed", url:"https://allevents.in/hyderabad/decadant-desserts/3900030542405643", added:"2026-08-16"},
-
-    {dow:6, a:"multi", cat:"speak", name:"Open Mic — Raw & Real",
-     when:"Multiple Saturdays", where:"Locale Cafe & Bistro",
-     note:"A standing open floor for stand-up, poetry and music. Thinnest category on this board — worth a direct check next sweep for more rooms like it.", cost:"₹499", url:"https://www.district.in/events/open-mic-raw-real-may25-2025-buy-tickets", added:"2026-08-16"},
-
-    {date:"2026-09-19", a:"hitech", cat:"music", name:"Federal Bank Bharat Surotsav",
-     when:"Sat 19 Sep · 6:00–9:00 PM", where:"Shilpakala Vedika, Madhapur",
-     note:"A classical-heritage concert at the city's largest dedicated auditorium, alongside Barkha Ritu on this board's music slate.", cost:"₹999+", url:"https://allevents.in/hyderabad/federal-bank-bharat-surotsav/3900030529514133", added:"2026-08-19"},
-
-    {dow:5, a:"hitech", cat:"stage", name:"Comedy at Hitech City",
-     when:"Every Friday", where:"The Street Comedy Club, Madhapur",
-     note:"The Street Comedy Club's standing Friday-night line-up at ₹199 — the cheapest door on this board's comedy circuit. The same room also runs weekend slots if the week moves on.", cost:"₹199", url:"https://www.district.in/events/comedy-at-hitech-city-jul13-2025-buy-tickets", added:"2026-08-17"},
-
-    {date:"2026-10-04", a:"hitech", cat:"stage", name:"Let's Talk About It",
-     when:"Sun 4 Oct · 7:30 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"Sundeep Bhardwaj's set on politics, religion and identity — the 'we need to talk' show touring Indian comedy clubs. On at The Comedy Theatre while its nightly roster keeps running.", cost:"₹699", url:"https://www.district.in/events/lets-talk-about-it-oct4-2026-buy-tickets", added:"2026-08-17"},
-
-    {dow:6, a:"central", cat:"craft", name:"Lippan Art Workshop",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"A mirror-work mud-and-clay craft session at the venue carrying this board's whole central-Hyderabad craft programme. One of the newest additions to its Saturday roster.", cost:"₹999+", url:"https://www.district.in/events/lippan-art-workshop-aug1-2026-buy-tickets", added:"2026-08-17"},
-
-    {dow:6, a:"central", cat:"craft", name:"Clay Puzzle Workshop",
-     when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar",
-     note:"A clay session that builds pieces of a puzzle you assemble afterwards — a take-home project rather than a wall piece. Runs on the same Saturday calendar as the venue's other workshops.", cost:"₹1,299+", url:"https://www.district.in/events/clay-puzzle-aug1-2026-buy-tickets", added:"2026-08-17"},
-
-    {date:"2026-09-19", a:"hitech", cat:"startup", name:"Techcanvass Connect Summit Hyderabad",
-     when:"Sat 19 Sep · 9:00 AM–2:15 PM", where:"Deccan Serai, HITEC City",
-     note:"A business-analytics and technology summit at Deccan Serai — a full-day conference rather than a meetup. Early-registration pricing applies, so book before the September weekend.", cost:"Registration required", url:"https://www.eventbrite.com/e/techcanvass-connect-summit-hyderabad-tickets-1992569827994", added:"2026-08-17"},
-
-    {date:"2026-09-19", a:"hitech", cat:"stage", name:"Daniel Fernandes — Do You Know Who I Am?",
-     when:"Sat 19 Sep · 5:30 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"A touring solo hour at Gachibowli's dedicated comedy room.", cost:"Not specified", url:"https://allevents.in/hyderabad/daniel-fernandes-do-you-know-who-i-am/3900030623740459", added:"2026-09-01"},
-
-    {date:"2026-09-19", a:"hitech", cat:"stage", name:"Cry Daddy — Anirban Dasgupta",
-     when:"Sat 19 Sep · 6:30 PM", where:"KLN Prasad Auditorium, FTCCI",
-     note:"A solo hour at the seminar-hall venue rather than Gachibowli's usual comedy-club rooms.", cost:"Not specified", url:"https://allevents.in/hyderabad/cry-daddy-by-anirban-dasgupta/3900030397612509", added:"2026-09-01"},
-
-    {date:"2026-09-26", a:"banjara", cat:"food", name:"Fresh Fruit Gateaux",
-     when:"Sat 26 Sep · 10:00 AM", where:"100 Folds Academy, Jubilee Hills",
-     note:"A fruit-and-sponge cake class, the academy's third distinct format on this board alongside Tiramisu and the earlier Gourmet Cookies.", cost:"Not specified", url:"https://allevents.in/hyderabad/fresh-fruit-gateaux/3900030557854754", added:"2026-09-01"},
-
-    {date:"2026-09-19", a:"hitech", cat:"craft", name:"Kintsugi — The Art of the Beautiful Break",
-     when:"Sat 19 Sep · 2:00 PM", where:"Ruth's Cafe, Gachibowli",
-     note:"The Japanese gold-repair technique taught as a real workshop, not just a metaphor — a genuine first for this board's craft slate.", cost:"Not specified", url:"https://allevents.in/hyderabad/kintsugi-the-art-of-the-beautiful-break/3900030612342703", added:"2026-09-01"},
-
-    {date:"2026-10-04", a:"hitech", cat:"outdoors", name:"Run for Child Health 2026",
-     when:"Sun 4 Oct · 5:00 AM", where:"Gachibowli Stadium",
-     note:"A charity community run at the same stadium as the Royal Stag BoomBox festival and Mana Run.", cost:"₹699–₹999", url:"https://allevents.in/hyderabad/run-for-child-health-2026-tickets/80003514888772", added:"2026-09-01"},
-
-    {date:"2026-10-04", a:"hitech", cat:"startup", name:"eChai Startup Open House — 4 Oct",
-     when:"Sun 4 Oct · 11:00 AM–1:00 PM", where:"DraperU India, Gachibowli",
-     note:"eChai’s founder open house has moved from 20 September to 4 October, with existing registrations carrying over. The Draper Startup House room is built for candid introductions, peer feedback and early-stage startup conversations.", cost:"Free", free:true, url:"https://echai.ventures/events/echai-s-startup-open-house-in-hyderabad-oct-04-2026", added:"2026-09-08"},
-
-    {date:"2026-09-25", a:"hitech", cat:"ai", name:"AI Builders Meetup — Hyderabad",
-     when:"Fri 25 Sep · 4:00–6:00 PM", where:"CIE at IIIT Hyderabad, Gachibowli",
-     note:"Founders and engineers compare what is working in AI products, agents, pipelines and inference economics. Nearly 50 people are already listed, making this a credible Friday technical room rather than a thin meetup.", cost:"Free", free:true, url:"https://echai.ventures/events/ai-builders-meetup-hyderabad-edition-sep-25-2026", added:"2026-09-08"},
-
-    {date:"2026-09-26", a:"hitech", cat:"startup", name:"eChai Startup Demo Day — Hyderabad",
-     when:"Sat 26 Sep · 6:00–8:00 PM", where:"CoKarma Durgam Cheruvu, Hitech City",
-     note:"Early-stage founders show live products, take questions and get feedback in public rather than delivering polished investor pitches. The date was moved from August and the current page confirms almost 100 attendees.", cost:"Free", free:true, url:"https://echai.ventures/events/echai-startup-demo-day-in-hyderabad-sep-26-2026", added:"2026-09-08"},
-
-    {date:"2026-09-19", a:"hitech", cat:"startup", name:"Startup Struggles — The First Year",
-     when:"Sat 19 Sep · 5:30–6:30 PM", where:"Seeneemaa Spot, Khajaguda",
-     note:"A compact session on the unglamorous first-year work around GST, invoices, filings and operating discipline. It is practical founder education at a low ticket price rather than a generic networking pitch.", cost:"₹300", url:"https://allevents.in/hyderabad/start-up-struggles-tickets/80004896513928", added:"2026-09-08"},
-
-    {date:"2026-09-19", a:"hitech", cat:"music", name:"A Night for Arijit Singh — Root Three Five",
-     when:"Sat 19 Sep · 9:00–11:00 PM", where:"Hard Rock Cafe, Hitech City",
-     note:"Root Three Five build a two-hour set around Arijit Singh’s catalogue at the Hitech City Hard Rock. It is a smaller live-band alternative to the same weekend’s large concert-hall shows.", cost:"₹249", url:"https://allevents.in/hyderabad/a-night-for-arijit-singh-ft-root-three-five/3900030631663958", added:"2026-09-08"},
-
-    {date:"2026-09-19", a:"multi", cat:"music", name:"Rampally Live — Sam Hindi Acoustic Night",
-     when:"Sat 19 Sep · 8:00–11:00 PM", where:"Rampally Hi-Street, Nagaram, Secunderabad", mt:"Blue · Uppal, then cab",
-     note:"A low-cost Hindi acoustic evening at a venue beyond the usual Hitech City and Jubilee Hills cluster. It is the board’s first properly verified music listing in the Secunderabad side of the city.", cost:"₹150", url:"https://allevents.in/secunderabad/rampally-live-sam-hindi-acoustic-night/4100030625019233", added:"2026-09-08"},
-
-    {date:"2026-09-19", a:"hitech", cat:"stage", name:"Insecure — Gokul Kumar",
-     when:"Sat 19 Sep · 7:30–9:00 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"Gokul Kumar’s new touring hour turns confidence, relationships and middle-class awkwardness into a personal stand-up set. The show lands in the board’s most reliable comedy room.", cost:"Ticketed", url:"https://allevents.in/hyderabad/insecure-by-gokul-kumar/3900030600423355", added:"2026-09-08"},
-
-    {date:"2026-09-20", a:"multi", cat:"music", name:"RUHBARU — Orchestral Qawwali Project",
-     when:"Sun 20 Sep · 7:30–9:30 PM", where:"S S Convention Centre, Shamshabad", mt:"No nearby Metro — airport-road cab",
-     note:"Rushil Ranjan and Abi Sampa combine qawwali with Western classical, choral and Indian classical arrangements for the project’s India debut. It is expensive and far south, but genuinely unlike the board’s other live music.", cost:"₹2,099–₹10,299", url:"https://allevents.in/hyderabad/ruhbaru-orchestral-qawwali-project/4100030247599320", added:"2026-09-08"},
-
-    {date:"2026-09-20", a:"hitech", cat:"stage", name:"Over Confidence — Ravi Khurana",
-     when:"Sun 20 Sep · 7:00–8:15 PM", where:"The Street Comedy Club, Madhapur",
-     note:"Ravi Khurana’s new solo moves through relationships and middle-class life with sharper stories than his earlier Confidence hour. The 75-minute slot leaves the rest of Sunday evening open.", cost:"Ticketed", url:"https://allevents.in/hyderabad/over-confidence-ravi-khurana-live/3900030498553918", added:"2026-09-08"},
-
-    {date:"2026-09-24", a:"banjara", cat:"startup", name:"Access MBA Hyderabad",
-     when:"Thu 24 Sep · 4:30–9:15 PM", where:"Hyatt Place, Banjara Hills",
-     note:"Admissions directors from international business schools meet candidates one-to-one, with profile review and school matching in the same evening. It gives the professional category a useful Thursday option for anyone actively considering an MBA.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/accelerate-your-career-with-an-mba-at-access-mba-hyderabad-tickets/80001531553538", added:"2026-09-08"},
-
-    {date:"2026-09-26", a:"hitech", cat:"startup", name:"ET DevNext Hyderabad",
-     when:"Sat 26 Sep · from 7:00 AM", where:"Novotel Hyderabad Convention Centre, Hitech City",
-     note:"A developer conference for engineers and technology leaders working on scalable AI systems and modern architectures. The technical focus gives the startup-and-business category more substance than another mixer.", cost:"Registration required", url:"https://allevents.in/hyderabad/developer-event-and-conference-hyderabad-et-devnext/80004755752807", added:"2026-09-08"},
-
-    {date:"2026-09-26", a:"central", cat:"social", name:"Fake Wedding — Full-Scale Party Experience",
-     when:"Sat 26 Sep · 4:00–11:00 PM", where:"Grand Lawn, Jalavihar, Necklace Road", mt:"Blue · Necklace Road",
-     note:"A staged wedding party supplies the decor, DJ sets, Punjabi dhol and dance floor without an actual ceremony. The deliberately playful format makes it easier to arrive with friends and mix than a standard club night.", cost:"Ticketed", url:"https://allevents.in/hyderabad/fake-wedding/3900030395227439", added:"2026-09-08"},
-
-    {date:"2026-09-27", a:"central", cat:"outdoors", name:"Gunners Soldierathon Hyderabad — 2nd Edition",
-     when:"Sun 27 Sep · from 5:00 AM", where:"Artillery Centre, Golconda", mt:"Red · Lakdi-ka-pul, then cab",
-     note:"The second Hyderabad Soldierathon marks 200 years of the Regiment of Artillery with a public community run. The military setting and bicentennial theme make it distinct from the stadium charity races.", cost:"Registration required", url:"https://allevents.in/hyderabad/federal-bank-gunners-soldierathon-hyderabad-2nd-edition/80001833904294", added:"2026-09-08"},
-
-    {date:"2026-10-02", a:"central", cat:"music", name:"Bhajan Mahotsav",
-     when:"Fri 2 Oct · 6:30–9:30 PM", where:"Ravindra Bharathi, Saifabad", mt:"Red · Lakdi-ka-pul",
-     note:"A three-hour devotional-music programme at one of Hyderabad’s central cultural auditoriums. It gives Friday evening a traditional option outside the Hitech City nightlife circuit.", cost:"₹500+", url:"https://allevents.in/hyderabad/bhajan-mahotsav/3900030666063423", added:"2026-09-08"},
-
-    {date:"2026-10-03", a:"hitech", cat:"startup", name:"Global Startups Club — Hyderabad Networking",
-     when:"Sat 3 Oct · 10:30 AM–1:30 PM", where:"The Headquarters Orbit, Knowledge City",
-     note:"Business speed-dating, 30-second founder pitches and open networking give this morning a more transactional shape than eChai. The ₹475 pass is modest for a room built around specific asks and introductions.", cost:"₹475", url:"https://allevents.in/hyderabad/global-startups-club-l-startup-networking-hyderabad-2026-tickets/80002598585595", added:"2026-09-08"},
-
-    {date:"2026-10-03", a:"hitech", cat:"music", name:"Seedhe Maut Live",
-     when:"Sat 3 Oct · 8:00 PM–12:30 AM", where:"Odeum by Prism, Financial District",
-     note:"The Delhi hip-hop duo bring their full live set to a large Financial District venue. It is the board’s strongest contemporary rap booking and runs well past midnight.", cost:"₹899–₹1,999", url:"https://allevents.in/hyderabad/seedhe-maut/4100030654381039", added:"2026-09-08"},
-
-    {date:"2026-10-09", a:"hitech", cat:"food", name:"Grand Food Fest 2026",
-     when:"Fri 9–Sun 11 Oct · from 12:00 PM", where:"Gachibowli Stadium",
-     note:"A three-day food festival turns the stadium into a broad tasting and social destination rather than a single workshop. The ₹120 entry makes it one of the easiest low-cost group plans on the board.", cost:"₹120", url:"https://allevents.in/hyderabad/grand-food-fest-2026-tickets/80002183818241", added:"2026-09-08"},
-
-    {date:"2026-10-10", a:"hitech", cat:"stage", name:"Sapan Verma Live — 2026 New Tour",
-     when:"Sat 10 Oct · 7:00 PM", where:"District 150, Knowledge City",
-     note:"Sapan Verma’s new hour moves from artificial intelligence to children’s birthday parties through sharp personal storytelling. District 150 is a new comedy venue for this board and the ₹499 entry is clearly listed.", cost:"₹499", url:"https://allevents.in/hyderabad/sapan-verma-live-2026-new-tour/3900030237573718", added:"2026-09-08"},
-
-    {date:"2026-10-10", a:"hitech", cat:"stage", name:"The Room of Memories",
-     when:"Sat 10 Oct · 11:00 AM–12:15 PM", where:"Shilpakala Vedika, Madhapur",
-     note:"International performer Katastrofa combines flying balloons, giant bubbles, puppets, storytelling and magic in a family stage show. The production has toured 25 countries and gives the board a rare daytime performance.", cost:"₹499–₹3,499", url:"https://allevents.in/hyderabad/the-room-of-memories-tickets/80002276877238", added:"2026-09-08"},
-
-    {date:"2026-10-11", a:"hitech", cat:"social", name:"Dandiya Nights 2026 — Hyderabad",
-     when:"Sun 11 Oct · 6:00–11:00 PM", where:"Sri Infinity Convention, Manikonda",
-     note:"Five hours of garba and dandiya turn a convention lawn into a full Navratri social night. It adds a seasonal dance format without needing a permanent dance category.", cost:"₹399–₹2,099", url:"https://allevents.in/hyderabad/dandiya-nights-2026-hyderabad/4100030583569004", added:"2026-09-08"},
-
-    {date:"2026-10-11", a:"hitech", cat:"outdoors", name:"Grace Cancer Run Hyderabad 2026",
-     when:"Sun 11 Oct · from 5:00 AM", where:"Gachibowli Stadium",
-     note:"Choose a 2K, 5K or 10K distance in a large awareness run based at Gachibowli Stadium. The multiple distances make it more approachable for a mixed-fitness group.", cost:"Registration required", url:"https://allevents.in/hyderabad/grace-cancer-run-hyderabad-2026/200030398540523", added:"2026-09-08"},
-
-    {date:"2026-10-11", a:"central", cat:"stage", name:"Standing Up — Kunal Kamra",
-     when:"Sun 11 Oct · 3:00–4:30 PM", where:"Visvesvaraya Bhavan, Khairatabad", mt:"Red · Lakdi-ka-pul",
-     note:"Kunal Kamra brings a new-material set to a central auditorium rather than the city’s small comedy-club circuit. The afternoon timing also leaves the evening free for Dandiya or another plan.", cost:"Ticketed", url:"https://allevents.in/hyderabad/standing-up-by-kunal-kamra/3900030389616633", added:"2026-09-08"},
-
-    {date:"2026-10-15", a:"hitech", cat:"startup", name:"Seed Business School Festival — Hyderabad",
-     when:"Thu 15 Oct · 5:00–9:30 PM", where:"Le Méridien Hyderabad, Gachibowli",
-     note:"Admissions directors from more than 20 international business schools meet candidates in person at no charge. It is a useful Thursday professional room for comparing programmes before committing to applications.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/seed-business-school-festival-2026-hyderabad/100001998879351950", added:"2026-09-08"},
-
-    {date:"2026-09-19", a:"central", cat:"stage", name:"Halki Halki Fati? — Vikas Kush Sharma",
-     when:"Sat 19 Sep · 7:00–8:30 PM", where:"Bhaskara Auditorium, Khairatabad", mt:"Red · Lakdi-ka-pul",
-     note:"Vikas Kush Sharma combines crowd work, modern shayari and quick reactions to awkward audience moments. The central auditorium gives the board a comedy option outside its usual Gachibowli and Madhapur rooms.", cost:"Ticketed", url:"https://allevents.in/hyderabad/halki-halki-fati-by-vikas-kush-sharma/3900030407839243", added:"2026-09-09"},
-
-    {date:"2026-09-20", a:"hitech", cat:"stage", name:"Corporate Majdoor — Anmol Garg",
-     when:"Sun 20 Sep · 5:30–7:00 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"Former software engineer Anmol Garg turns meetings, managers and office language into a full hour of corporate comedy. It is the most directly work-life-focused stand-up option on the current board.", cost:"Ticketed", url:"https://allevents.in/hyderabad/corporate-majdoor-by-anmol-garg/3900030409779736", added:"2026-09-09"},
-
-    {date:"2026-09-27", a:"hitech", cat:"stage", name:"Abijit Ganguly Live — 27 Sep",
-     when:"Sun 27 Sep · 6:00–7:15 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"This second Hyderabad date gives anyone who misses the earlier performance another exact booking option. Abijit’s new material focuses on staying upright through his thirties with marriage and adulthood supplying the friction.", cost:"Ticketed", url:"https://allevents.in/hyderabad/abijit-ganguly-live/3900030579792044", added:"2026-09-09"},
-
-    {date:"2026-09-27", a:"hitech", cat:"social", name:"Moodboard — A Cultural Pop-Up",
-     when:"Sun 27 Sep · 11:00 AM–9:00 PM", where:"SAS iTower, Khajaguda",
-     note:"Independent labels, traditional weaves, live makers and food stalls share one festive-season floor for ten hours. The mix of watching, browsing and eating makes it easier to attend socially than a standard shopping exhibition.", cost:"Price on listing", url:"https://allevents.in/hyderabad/moodboard-a-cultural-pop-up/3900030585926614", added:"2026-09-09"},
-
-    {date:"2026-10-03", a:"banjara", cat:"food", name:"Viral London Chocolate Caramel Cake Class",
-     when:"Sat 3 Oct · 10:00 AM–1:00 PM", where:"100 Folds Academy, Jubilee Hills",
-     note:"The class builds a bakery-style chocolate cake through layered caramel, finishing and presentation techniques. It adds a focused modern format to 100 Folds’ existing fruit and plated-dessert programme.", cost:"Price on listing", url:"https://allevents.in/hyderabad/viral-london-chocolate-caramel-cake/3900030659502146", added:"2026-09-09"},
-
-    {dow:4, a:"multi", cat:"social", name:"Hyderabad BlaBla Language Exchange",
-     when:"Every Thursday · 8:00–10:00 PM", where:"Pushpa Enterprises, Gowliguda", mt:"Green · MGBS",
-     note:"People practise languages over food and drinks in a two-hour Thursday social near the Old City. The recurring format finally gives this board a real weekday language-exchange room beyond the Hitech City corridor.", cost:"Order food or drink", url:"https://allevents.in/hyderabad/hyderabad-blabla-language-exchange-on-thursdays-recurrent-event/200030124693914", added:"2026-09-09"},
-
-    {dow:4, a:"central", cat:"wellness", name:"YSS Thursday Group Meditation",
-     when:"Every Thursday · 4:40–7:00 PM", where:"YSS Dhyana Kendra, Begumpet", mt:"Blue · Prakash Nagar",
-     note:"The public weekly programme combines silent meditation, devotional chanting and an inspirational reading at the long-running YSS centre. It gives the board a dependable Thursday wellness practice instead of another single weekend workshop.", cost:"Open to public", url:"https://yssofindia.org/location/hyderabad", added:"2026-09-09"},
-
-    {date:"2026-09-26", a:"hitech", cat:"ai", name:"MongoDB Atlas Vector Search Meetup",
-     when:"Sat 26 Sep · 10:00 AM–3:00 PM", where:"Entain India, Financial District",
-     note:"MongoDB’s Hyderabad user group works through embeddings, semantic search, vector-search architecture and quantisation. More than 275 attendees are listed, making this one of the month’s strongest developer-community rooms.", cost:"Free RSVP", free:true, url:"https://www.meetup.com/mongodb-usergroup-hyderabad/events/316348822/", added:"2026-09-09"},
-
-    {date:"2026-09-19", a:"multi", cat:"music", name:"Micless with Merakee",
-     when:"Sat 19 Sep · 5:00–9:00 PM", where:"Lake Shore Mall, Kukatpally", mt:"Red · KPHB Colony",
-     note:"Merakee turns a Telugu live set into a mass sing-along where the crowd supplies the lead voice. The family-friendly four-hour format has grown from a small jam into one of Hyderabad’s most distinctive participatory music events.", cost:"₹399+", url:"https://allevents.in/hyderabad/micless-with-merakee/3900030676053309", added:"2026-09-09"},
-
-    {date:"2026-09-27", a:"hitech", cat:"ai", name:"Apache Kafka Meetup — Hyderabad",
-     when:"Sun 27 Sep · 10:30 AM–2:30 PM", where:"EPAM, Knowledge City, Raidurg",
-     note:"Confluent’s Hyderabad community runs three stream-processing sessions with a break and networking lunch at EPAM. The in-person programme gives the new AI and tech category a data-infrastructure counterweight.", cost:"Registration required", url:"https://www.meetup.com/hyderabad-kafka/events/316454071/", added:"2026-09-10"},
-
-    {date:"2026-09-20", a:"multi", cat:"outdoors", name:"Shamirpet Forest Hike & Rock Climbing",
-     when:"Sun 20 Sep · 6:00–10:30 AM", where:"Petrol Pump, Tirumalgiri X Roads", mt:"Green · JBS Parade Ground, then cab",
-     note:"ClimbOn leads a beginner-friendly forest hike with bouldering and chimney-climbing practice near Shamirpet. The group meets at Tirumalgiri for the five-hour outing, and only a few seats remain.", cost:"₹250", url:"https://www.meetup.com/theclimbon/events/316054731/", added:"2026-09-10"},
-
-    {date:"2026-09-18", a:"hitech", cat:"games", name:"Gyaan Guru — The Desi Indian Quiz",
-     when:"Fri 18 Sep · 8:00–10:00 PM", where:"Mindspace Social, Hitech City",
-     note:"A hosted team quiz moves through Indian pop culture, music, films and current affairs at Mindspace Social. The Friday-night format adds a real weekday games option beside the board’s weekend rooms.", cost:"₹299", url:"https://www.district.in/events/gyaan-guru-quizzing-the-desi-indian-quiz-sep18-2026-buy-tickets", added:"2026-09-10"},
-
-    {date:"2026-09-26", a:"hitech", cat:"music", name:"Agomoni — Phoenix Arena",
-     when:"Sat 26 Sep · 6:00 PM", where:"Phoenix Arena, Hitech City",
-     note:"Agomoni brings a Bengali cultural evening to the Phoenix Arena ahead of the Puja season. It gives the music calendar a community programme that is distinct from club gigs and tribute concerts.", cost:"Ticketed", url:"https://allevents.in/hyderabad/agomoni/3900030638908658", added:"2026-09-10"},
-
-    {date:"2026-10-24", a:"banjara", cat:"food", name:"Entremets — Black Forest Revisited",
-     when:"Sat 24 Oct · 10:00 AM–2:00 PM", where:"100 Folds Academy, Jubilee Hills",
-     note:"The four-hour class rebuilds Black Forest as a modern layered entremet rather than a standard sponge cake. It extends the academy’s dated programme into late October with a more advanced format.", cost:"Ticketed", url:"https://allevents.in/hyderabad/entremets-making-black-forest-revisited/3900030657722931", added:"2026-09-10"},
-
-    {date:"2026-10-31", a:"banjara", cat:"food", name:"Classic Tarts — 100 Folds Academy",
-     when:"Sat 31 Oct · 10:00 AM–1:00 PM", where:"100 Folds Academy, Jubilee Hills",
-     note:"A three-hour tart class closes the academy’s October programme with pastry structure, fillings and finishing. It is a different technique from the gateaux and plated-dessert sessions already listed.", cost:"Ticketed", url:"https://allevents.in/hyderabad/classic-tarts/3900030656661107", added:"2026-09-10"},
-
-    {date:"2027-02-07", a:"central", cat:"outdoors", name:"Hare Krishna Run 2027 — Second Edition",
-     when:"Sun 7 Feb 2027 · 5:00–6:00 AM", where:"Sanjeevaiah Park, Hussain Sagar",
-     note:"The second Hare Krishna Run offers multiple race distances from Sanjeevaiah Park at sunrise. It is far ahead, but the exact ticket page and tiered prices are already live for runners planning their season.", cost:"₹699–₹1,099", url:"https://allevents.in/hyderabad/hare-krishna-run-2027-2nd-edition-tickets/80001888300347", added:"2026-09-10"},
-
-    {date:"2026-09-20", a:"hitech", cat:"games", name:"Bingo Beats Club — Oktoberfest Edition",
-     when:"Sun 20 Sep · 6:00–9:00 PM", where:"Mindspace Social, Hitech City",
-     note:"A music-led Oktoberfest version of bingo replaces quiet number calling with teams, drinks and fast rounds. It is a social game night built for groups and people arriving solo.", cost:"₹299", url:"https://www.district.in/events/bingo-beats-club-oktoberfest-edition-mindspace-social-sep20-2026-buy-tickets", added:"2026-09-11"},
-
-    {date:"2026-09-19", a:"multi", cat:"stage", name:"Introvert — Full Comedy",
-     when:"Sat 19 Sep · 8:30–9:30 PM", where:"The Street Drive In, Jawahar Nagar",
-     note:"A full stand-up hour builds material around introversion and social discomfort. The drive-in venue extends comedy coverage beyond the usual Madhapur and Gachibowli rooms.", cost:"Ticketed", url:"https://allevents.in/hyderabad/introvert-full-comedy/3900030679857819", added:"2026-09-11"},
-
-    {date:"2026-09-19", a:"hitech", cat:"music", name:"Jammers at Heart Cup Coffee",
-     when:"Sat 19 Sep · 8:30–11:30 PM", where:"Heart Cup Coffee, Gachibowli",
-     note:"A three-hour live jam gives local musicians room to trade songs and spontaneous collaborations. The informal café setting makes it more social than a fixed concert set.", cost:"Ticketed", url:"https://allevents.in/hyderabad/jammers/3900030678900755", added:"2026-09-11"},
-
-    {date:"2026-09-19", a:"hitech", cat:"startup", name:"Global Startup Summit 2026 — Hyderabad",
-     when:"Sat 19 Sep · 8:30 AM–6:00 PM", where:"Hotel Deccan Serai Grande, Gachibowli",
-     note:"A full-day summit combines founder networking, business sessions and startup pitches at one venue. It is the month’s largest verified professional gathering on the Hyderabad board.", cost:"₹1,750–₹6,500", url:"https://allevents.in/hyderabad/global-startup-summit-2026-hyderabad-tickets/80002366469430", added:"2026-09-11"},
-
-    {date:"2026-09-19", a:"hitech", cat:"startup", name:"Inside PGP PRO at ISB",
-     when:"Sat 19 Sep · 11:00 AM–1:00 PM", where:"Indian School of Business, Gachibowli",
-     note:"ISB alumni and admissions staff explain the working-professional PGP PRO format on campus. It provides direct programme access rather than a general education fair.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/inside-pgp-pro-meet-isb-alumni-and-admissions-team-in-isb-hyderabad-campus/100001999011033814", added:"2026-09-11"},
-
-    {date:"2026-09-20", a:"hitech", cat:"outdoors", name:"Ozone Run Hyderabad 2026",
-     when:"Sun 20 Sep · 5:00 AM", where:"Gachibowli Stadium",
-     note:"An early community run ties participation to ozone and clean-air awareness. The stadium start gives runners a clear, accessible meeting point.", cost:"Ticketed", url:"https://allevents.in/secunderabad/ozone-run-hyderabad-2026/200030556629217", added:"2026-09-11"},
-
-    {date:"2026-09-20", a:"banjara", cat:"dance", name:"Tollywood Dance Workshop",
-     when:"Sun 20 Sep · from 4:00 PM", where:"Vibe Studio, Jubilee Hills",
-     note:"A choreographed Tollywood session welcomes dancers into a guided two-hour routine. It is a participatory alternative to watching a stage performance.", cost:"Ticketed", url:"https://allevents.in/hyderabad/tollywood-dance-workshop/3900030617035630", added:"2026-09-11"},
-
-    {date:"2026-09-26", a:"banjara", cat:"stage", name:"Naughty@40",
-     when:"Sat 26 Sep · 8:00–9:30 PM", where:"Garage Moto Cafe, Jubilee Hills",
-     note:"A stand-up show mines the comedy of ageing, family and reinvention after forty. The café venue makes it a compact Saturday-night alternative to large auditoriums.", cost:"Ticketed", url:"https://allevents.in/hyderabad/naughty-40-a-standup-comedy-show/3900030683047548", added:"2026-09-11"},
-
-    {date:"2026-09-26", a:"hitech", cat:"dance", name:"Salsa, Bachata & Partner Dance Workshop",
-     when:"Sat 26 Sep · 5:00–6:30 PM", where:"Lets Go Dance, Madhapur",
-     note:"A beginner-friendly session introduces salsa and bachata through guided partner rotations. It gives people a clear way to meet others while learning a shared skill.", cost:"Ticketed", url:"https://allevents.in/hyderabad/salsa-bachata-partner-dance-workshop/3900030678415032", added:"2026-09-11"},
-
-    {date:"2026-09-26", a:"hitech", cat:"stage", name:"Namaste Trump — Avinash Agarwal",
-     when:"Sat 26 Sep · 7:00–8:30 PM", where:"District 150, Knowledge City",
-     note:"Avinash Agarwal brings a topical stand-up hour to Knowledge City. The show adds a larger venue to a comedy slate otherwise concentrated in small clubs.", cost:"Ticketed", url:"https://allevents.in/hyderabad/namaste-trump-a-comedy-show-by-avinash-agarwal/3900030674318943", added:"2026-09-11"},
-
-    {date:"2026-09-26", a:"hitech", cat:"social", name:"Love by Manforce",
-     when:"Sat 26 Sep · 7:00 PM–12:00 AM", where:"Quake Arena, Kondapur",
-     note:"A large nightlife production combines DJs, performance and immersive brand installations. It gives the social category a full-scale Saturday event rather than another café meetup.", cost:"Ticketed", url:"https://allevents.in/hyderabad/love-by-manforce/3900030675914812", added:"2026-09-11"},
-
-    {date:"2026-09-27", a:"central", cat:"outdoors", name:"Pink Power Run 2026",
-     when:"Sun 27 Sep · 5:30 AM", where:"People’s Plaza, Necklace Road", mt:"Blue · Necklace Road",
-     note:"A public community run gathers participants at Necklace Road around women’s health and empowerment. The central start point broadens the outdoor map beyond Gachibowli.", cost:"Ticketed", url:"https://allevents.in/hyderabad/pink-power-run-2026/200030682113231", added:"2026-09-11"},
-
-    {date:"2026-09-27", a:"hitech", cat:"craft", name:"Happy Hands — Baking & Block Printing",
-     when:"Sun 27 Sep · 10:00 AM–1:00 PM", where:"Chinnu’s Bake Studio, Hafeezpet",
-     note:"A combined workshop moves from a baking activity into textile block printing. The two-medium format offers more substance than a single quick craft session.", cost:"Ticketed", url:"https://allevents.in/hyderabad/happy-hands-baking-block-printing/3900030677974926", added:"2026-09-11"},
-
-    {date:"2026-09-27", a:"central", cat:"speak", name:"Ghar — An Open Mic for Words",
-     when:"Sun 27 Sep · 12:00–1:30 PM", where:"Cafe Coffee Day, Punjagutta", mt:"Red · Punjagutta",
-     note:"Tape A Tale hosts poetry and storytelling in a compact lunchtime open mic. New performers can test material while listeners get a varied spoken-word programme.", cost:"Ticketed", url:"https://allevents.in/hyderabad/ghar-an-open-mic-for-words-by-tape-a-tale/3900030673915339", added:"2026-09-11"},
-
-    {date:"2026-09-27", a:"hitech", cat:"stage", name:"Satyabrat Mohapatra Live",
-     when:"Sun 27 Sep · 5:00–6:20 PM", where:"The Street Comedy Club, Madhapur",
-     note:"Satyabrat Mohapatra brings a touring stand-up set to the city’s dedicated Madhapur room. The early showtime leaves Sunday evening open for another plan.", cost:"Ticketed", url:"https://allevents.in/hyderabad/satyabrat-mohapatra-live/3900030667456712", added:"2026-09-11"},
-
-    {date:"2026-09-27", a:"hitech", cat:"outdoors", name:"Flexathon Run",
-     when:"Sun 27 Sep · 5:00–10:00 AM", where:"Engineering Staff College of India, Gachibowli",
-     note:"A multi-distance running morning uses the ESCI campus and surrounding lake roads. The long event window supports both serious runners and shorter community participation.", cost:"₹599–₹899", url:"https://allevents.in/hyderabad/flexathon-run/4100030633720421", added:"2026-09-11"},
-
-    {date:"2026-10-03", a:"banjara", cat:"stage", name:"Vijay Yadav Live",
-     when:"Sat 3 Oct · 6:00–7:30 PM", where:"Aaromalé, Film Nagar",
-     note:"Vijay Yadav performs a full comedy set in Aaromalé’s intimate arts-café room. It adds an early Saturday stage option in Jubilee Hills.", cost:"Ticketed", url:"https://allevents.in/hyderabad/vijay-yadav-live/3900030671432358", added:"2026-09-11"},
-
-    {date:"2026-10-09", a:"hitech", cat:"stage", name:"RageBait — Shubham Shandilya",
-     when:"Fri 9 Oct · 9:00–10:00 PM", where:"The Street Comedy Club, Madhapur",
-     note:"Shubham Shandilya’s solo uses internet outrage and everyday irritation as its comic engine. The late Friday slot fills a useful after-work gap.", cost:"Ticketed", url:"https://allevents.in/hyderabad/ragebait-a-stand-up-solo-by-shubham-shandilya/3900030683188858", added:"2026-09-11"},
-
-    {date:"2026-10-10", a:"central", cat:"stage", name:"Shashi Dhiman Live",
-     when:"Sat 10 Oct · 7:00–9:00 PM", where:"FTCCI, Lakdikapul", mt:"Red · Lakdikapul",
-     note:"Shashi Dhiman brings a two-hour touring stand-up show to the FTCCI auditorium. It strengthens central Hyderabad’s thin evening coverage with a clearly timed ticketed event.", cost:"₹499", url:"https://allevents.in/hyderabad/shashi-dhiman-live/3900030183874921", added:"2026-09-11"},
-
-    {date:"2026-09-15", a:"banjara", cat:"stage", name:"The Land of Ahimsa",
-     when:"Tue 15 Sep · 5:00–7:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"This documentary follows vegan activist Dolly Vyas-Ahuja as she returns to India to connect ahimsa with a plant-based life. The Tuesday screening adds a rare early-week cultural plan with an ethical-food angle.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10885", added:"2026-09-13"},
-
-    {date:"2026-09-19", a:"banjara", cat:"social", name:"RESET Chapter 3",
-     when:"Sat 19 Sep · 11:00 AM–2:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"A screen-free meetup combines hands-on learning, conversation and playful group activities. The three-hour format is designed to help people unplug and meet beyond their usual digital routines.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10862", added:"2026-09-13"},
-
-    {date:"2026-09-20", a:"banjara", cat:"social", name:"Bhumi Volunteer Orientation",
-     when:"Sun 20 Sep · 10:30 AM–12:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"Bhumi introduces volunteer roles in government schools, shelter homes and civic initiatives. The orientation lets newcomers meet the team and other volunteers before choosing how to contribute.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10852", added:"2026-09-13"},
-
-    {date:"2026-09-20", a:"banjara", cat:"social", name:"Hyderabad Indian-SF Reading Circle",
-     when:"Sun 20 Sep · 2:00–4:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"The reading circle discusses Samit Basu’s The Simoqin Prophecies and Indian speculative writing. It brings readers together around how local authors imagine technology, history and the future.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10810", added:"2026-09-13"},
-
-    {date:"2026-09-20", a:"banjara", cat:"speak", name:"Sahityam tho Sayantralu",
-     when:"Sun 20 Sep · 5:00–7:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"Author Vemuri Satyanarayana discusses Enabhailo Iravai with the Telugu Collective. The free session combines readings, audience questions and reflections on memory, humour and everyday life.", cost:"Free", free:true, url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10833", added:"2026-09-13"},
-
-    {date:"2026-09-20", a:"banjara", cat:"stage", name:"Pallisandadi / Na English Koncha",
-     when:"Sun 20 Sep · 8:00–10:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"This Telugu stage comedy turns interviews, classrooms, friendships and chai-shop talk into a celebration of Telugish. Its familiar situations and language mix make it an accessible local theatre night.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10306", added:"2026-09-13"},
-
-    {date:"2026-09-22", a:"banjara", cat:"stage", name:"Toubab — German Movie Night",
-     when:"Tue 22 Sep · 7:00–9:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"Goethe-Zentrum Hyderabad screens a German comedy-drama about friendship, identity and a threatened deportation. The film uses humour to examine loyalty, racism and belonging.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10796", added:"2026-09-13"},
-
-    {date:"2026-09-24", a:"banjara", cat:"stage", name:"Babul Eco Film Fest",
-     when:"Thu 24 Sep · 6:30–8:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"The environmental film programme uses documentaries, shorts and animation to open discussion on biodiversity and sustainable development. It gives Thursday evening a substantial non-commercial screening option.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10788", added:"2026-09-13"},
-
-    {date:"2026-09-27", a:"banjara", cat:"social", name:"Hyderabad Bookworms — Movie of the Month",
-     when:"Sun 27 Sep · 1:00–4:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"Hyderabad Bookworms screens The Life of Chuck and compares it with its source text. The monthly format leaves time for a discussion of adaptation and cultural context.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10820", added:"2026-09-13"},
-
-    {date:"2026-09-27", a:"banjara", cat:"speak", name:"Hyderabad’s Traffic Crisis — Public Discussion",
-     when:"Sun 27 Sep · 4:30–6:30 PM", where:"Lamakaan, Banjara Hills",
-     note:"Transport professionals, planners and citizens examine why road expansion has not delivered better mobility. The public session asks how Hyderabad can move more people through transit, walking and cycling.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10897", added:"2026-09-13"},
-
-    {date:"2026-09-18", a:"multi", cat:"speak", name:"Open Stage, Open Vibe",
-     when:"Fri 18 Sep · 5:00–6:30 PM", where:"The Magic Screen, Bahadurpally",
-     note:"An open mic welcomes stand-up, stories, poetry and singing on the same community stage. It adds a north-west Hyderabad performance room for new artists and listeners.", cost:"Ask", url:"https://allevents.in/hyderabad/open-stage-open-vibe/3900030669034252", added:"2026-09-13"},
-
-    {date:"2026-09-20", a:"hitech", cat:"social", name:"Content Playground",
-     when:"Sun 20 Sep · 12:30–6:30 PM", where:"CloudMellow, Madhapur",
-     note:"Creators, editors, designers and marketers work through content games and hands-on collaborative challenges. The long session is built for making things together as well as meeting Hyderabad’s creative community.", cost:"Ask", url:"https://allevents.in/hyderabad/content-playground/3900030688584943", added:"2026-09-13"},
-
-    {date:"2026-09-20", a:"hitech", cat:"stage", name:"Office Chugli — Anmol Garg",
-     when:"Sun 20 Sep · 3:30–5:00 PM", where:"The Comedy Theatre, Gachibowli",
-     note:"Anmol Garg mines toxic managers, pantry politics and appraisal heartbreaks for crowd-work comedy. Anyone who has survived corporate gossip should recognise the material immediately.", cost:"Ticketed", url:"https://allevents.in/hyderabad/office-chugli-stand-up-comedy-crowd-work-show/3900030423144831", added:"2026-09-13"},
-
-    {date:"2026-09-25", a:"banjara", cat:"food", name:"Back Into Orbit — 12-Course Tasting",
-     when:"Fri 25 Sep · 7:00–9:00 PM", where:"Roast CCx, Banjara Hills",
-     note:"Chef Rhythm Mahajan presents a twelve-course menu after training at the Culinary Institute of America and working in acclaimed kitchens. The small-format dinner is Hyderabad’s most ambitious new food experience on this sweep.", cost:"₹4,500", url:"https://allevents.in/hyderabad/back-into-orbit-a-12-course-tasting-experience-by-chef-rhythm-mahajan/4100030685626701", added:"2026-09-13"},
-
-    {date:"2026-09-25", a:"banjara", cat:"startup", name:"Meet Top International Business Schools",
-     when:"Fri 25 Sep · 4:00–8:45 PM", where:"Hyatt Place, Banjara Hills",
-     note:"Admissions representatives from international business schools discuss programmes, scholarships and application choices. The free fair gives prospective master’s students direct access to multiple institutions in one evening.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/meet-top-international-business-schools-in-hyderabad-tickets/80004436376325", added:"2026-09-13"},
-
-    {date:"2026-09-26", a:"central", cat:"stage", name:"Mental Asylum — Sravanthi Basa",
-     when:"Sat 26 Sep · 8:00–9:30 PM", where:"Vivanta, Begumpet",
-     note:"Sravanthi Basa turns trauma, failed relationships and overthinking into a stand-up set framed as group therapy with punchlines. The solo gives Hyderabad a sharp local comic voice beyond touring acts.", cost:"Ticketed", url:"https://allevents.in/hyderabad/mental-asylum-sravanthi-basa-live/3900030658236752", added:"2026-09-13"},
-
-    {date:"2026-09-26", a:"hitech", cat:"startup", name:"The Founder’s Network — Hyderabad",
-     when:"Sat 26 Sep · 9:30–10:30 AM", where:"NanoSpace Coworking, Nanakramguda",
-     note:"A curated morning brings founders, investors, mentors and business leaders into a conversation-first room. Ticket tiers separate ordinary access from higher-touch founder and investor packages.", cost:"₹999+", url:"https://allevents.in/hyderabad/the-founders-network-hyderabad-startups-club-tickets/80003587510961", added:"2026-09-13"},
-
-    {date:"2026-09-26", a:"hitech", cat:"music", name:"Threeory at HCC",
-     when:"Sat 26 Sep · 8:30–11:30 PM", where:"Heart Cup Coffee, Gachibowli",
-     note:"Hyderabad ensemble Threeory bring their live fusion sound to Heart Cup Coffee. The extended Saturday set works for listeners who want a local band rather than a generic DJ night.", cost:"Ask", url:"https://allevents.in/hyderabad/threeory-at-hcc/3900030683103839", added:"2026-09-13"},
-
-    {date:"2026-10-01", a:"hitech", cat:"music", name:"Submit or Rot — The Bleak",
-     when:"Thu 1 Oct · 9:00–11:00 PM", where:"Hard Rock Cafe, Hitech City",
-     note:"Arunachal Pradesh death-metal band The Bleak bring their 2026 India tour to Hyderabad. The Thursday show adds an independent heavy-music slot grounded in the north-east scene.", cost:"Ticketed", url:"https://allevents.in/hyderabad/submit-or-rot-the-bleak-india-tour-2026/3900030688159833", added:"2026-09-13"},
-
-    {date:"2026-10-09", a:"multi", cat:"wellness", name:"Heartfulness Monthly Retreat — October",
-     when:"Fri–Sun 9–11 Oct · from 9:00 AM", where:"Kanha Shanti Vanam, Nandigama",
-     note:"A free three-day residential introduction combines meditation practice with time in the Heartfulness headquarters campus. Telugu and English sessions make the retreat accessible to first-time seekers.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/heartfulness-monthly-retreat-october-2026-a-three-day-workshop-tickets/80009493681388", added:"2026-09-13"},
-
-    {date:"2026-09-16", a:"banjara", cat:"stage", name:"Celebrating Pedro Almodóvar — Talk to Her",
-     when:"Wed 16 Sep · 7:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"The Almodóvar retrospective screens Talk to Her with English subtitles, followed by a discussion of the film’s intimacy, ethics and storytelling. The free Wednesday programme brings substantial midweek cinema to the board.", cost:"Free", free:true, url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10664", added:"2026-09-15"},
-
-    {date:"2026-09-18", a:"banjara", cat:"stage", name:"Pomegranate Turned Grey — Screening & Talk",
-     when:"Fri 18 Sep · from 5:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"Khurram Murad screens his documentary on the memories and consequences of Operation Polo, then joins the audience for a discussion. It pairs personal testimony with a contested chapter of Hyderabad’s political history.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10922", added:"2026-09-15"},
-
-    {date:"2026-09-18", a:"banjara", cat:"stage", name:"DHWANI — Ashok Kumar Peddinti",
-     when:"Fri 18 Sep · from 6:15 PM", where:"Lamakaan, Banjara Hills",
-     note:"Ashok Kumar Peddinti turns four Telugu stories into performative readings with sound and visual elements. The programme sits between literature and theatre, giving Friday evening a local-language form absent from the touring-show listings.", cost:"Ask", url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10602", added:"2026-09-15"},
-
-    {date:"2026-09-23", a:"banjara", cat:"stage", name:"Celebrating Pedro Almodóvar — Volver",
-     when:"Wed 23 Sep · 7:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"The Lamakaan retrospective continues with Volver, Almodóvar’s story of mothers, daughters, grief and return, with English subtitles. A post-screening discussion turns the free film night into a shared reading of its themes.", cost:"Free", free:true, url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10665", added:"2026-09-15"},
-
-    {date:"2026-09-30", a:"banjara", cat:"stage", name:"Celebrating Pedro Almodóvar — Pain and Glory",
-     when:"Wed 30 Sep · 7:00 PM", where:"Lamakaan, Banjara Hills",
-     note:"Pain and Glory closes Lamakaan’s September Almodóvar series with a filmmaker looking back at desire, work and memory. The English-subtitled screening is followed by an audience discussion.", cost:"Free", free:true, url:"https://digital.lamakaan.com/index.php/event-page/?event_id=10666", added:"2026-09-15"},
-
-    {date:"2026-09-20", a:"hitech", cat:"music", name:"SwaRagam Telugu Mass Songs Jamming Session",
-     when:"Sun 20 Sep · 4:30–8:00 PM", where:"Amnesia Sky Bar, Madhapur",
-     note:"SwaRagam turns Telugu mass songs into a participatory afternoon of singing and dancing rather than a passive stage set. The extended jam is built for people who want to join the chorus with a live crowd.", cost:"Ticketed", url:"https://allevents.in/hyderabad/swaragam-telugu-mass-songs-jamming-session/3900030688727938", added:"2026-09-15"},
-
-    {date:"2026-09-25", a:"hitech", cat:"music", name:"Lifafa — Live in Hyderabad",
-     when:"Fri 25 Sep · 8:00 PM–12:30 AM", where:"Asembli, Nanakramguda",
-     note:"Lifafa brings Hindi electronic music, disco and introspective songwriting to Asembli for a full late-night set. The show is restricted to guests aged 21 and above.", cost:"₹999+", url:"https://allevents.in/hyderabad/lifafa-live-in-hyderabad/4100030690515606", added:"2026-09-15"},
-
-    {date:"2026-10-02", a:"hitech", cat:"music", name:"JAIKAAR — The Spiritual Concert",
-     when:"Fri 2 Oct · 6:00–10:00 PM", where:"HITEX Exhibition Center, Hitech City",
-     note:"JAIKAAR combines a spiritual concert with dining from 6 to 8 PM before the main performance. The organiser says net proceeds support charitable work, so admission is structured as a donor pass.", cost:"Donor pass", url:"https://allevents.in/hyderabad/jaikaar-the-spiritual-concert/3900030673458851", added:"2026-09-15"},
-
-    {date:"2026-10-17", a:"hitech", cat:"startup", name:"Inside PGP PRO — October",
-     when:"Sat 17 Oct · 11:00 AM–1:00 PM", where:"Indian School of Business, Gachibowli",
-     note:"ISB faculty, alumni and admissions staff explain the working-professional PGP PRO programme on campus. This October edition gives prospective applicants direct access to the people who teach, completed and manage the course.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/inside-pgp-pro-meet-isb-faculty-alumni-and-admissions-team-in-isb-hyderabad/100001999977081288", added:"2026-09-15"},
-
-    {date:"2026-11-01", a:"multi", cat:"outdoors", name:"Equality Run 2026",
-     when:"Sun 1 Nov · from 5:30 AM", where:"Statue of Equality, Shamshabad", mt:"No nearby Metro — cab required",
-     note:"The Statue of Equality brings runners, families, health professionals and volunteers together around fitness and social responsibility. The early-morning run requires advance registration at the exact event page.", cost:"Registration required", url:"https://allevents.in/hyderabad/equality-run-2026/200030682112929", added:"2026-09-15"},
-
-    {date:"2026-09-26", a:"hitech", cat:"ai", name:"Diffusion Models From First Principles",
-     when:"Sat 26 Sep · 9:00 AM–12:30 PM", where:"London Stock Exchange Group, Madhapur",
-     note:"AIYatra builds diffusion from the mathematics of noise and denoising through image, video, audio and multimodal architectures. The hands-on implementation is designed to run on a consumer GPU with 6 GB of VRAM.", cost:"Registration required", url:"https://www.meetup.com/aiyatra/events/316525443/", added:"2026-09-15"},
-
-    {date:"2026-09-19", a:"multi", cat:"outdoors", name:"Chowmahalla Palace Heritage Walk",
-     when:"Sat 19 Sep · 9:45–11:45 AM", where:"Chowmahalla Palace, Khilwat", mt:"Green · MGBS, then auto",
-     note:"Tareekh-e-Dakshin guides a two-hour walk through the palace courtyards, royal halls and stories of the Asaf Jahi dynasty. The ₹100 host fee covers the tour; the palace entry ticket is separate.", cost:"₹100 + entry", url:"https://urbanaut.app/spot/chowmahalla-palace-heritage-walk", added:"2026-09-15"},
-
-    {date:"2026-09-20", a:"banjara", cat:"ai", name:"Biomimetics — Learning From Nature’s Genius",
-     when:"Sun 20 Sep · 5:00–7:00 PM", where:"The Hoppery, Durgam Cheruvu",
-     note:"Synthetic biologist Vaibhav traces how natural systems inspire engineering, molecular design and AI-assisted biology. The discussion-led Brain Bar session includes Q&A, networking and a ₹150 food-and-beverage coupon.", cost:"₹399", url:"https://urbanaut.app/spot/biomimetics", added:"2026-09-15"},
-
-    {date:"2026-09-20", a:"banjara", cat:"speak", name:"Toastmasters Humorous Speech & Evaluation Contests",
-     when:"Sun 20 Sep · 9:45 AM–12:45 PM", where:"Goethe-Zentrum Hyderabad, Banjara Hills",
-     note:"Vision Toastmasters pairs a humorous-speech contest with an evaluation contest focused on constructive feedback. Guests can observe the speakers, learn the judging format and meet the club without taking a contest role.", cost:"RSVP", url:"https://www.meetup.com/visiontm/events/316452998/", added:"2026-09-15"}
+    {dow:0, a:"hitech", cat:"games", name:"Board Games Afternoon", when:"Every Sunday, all day", where:"Underdoggs, Hitech City", note:"A standing Sunday board-games room at one of Hitech City's best-known sports bars — turn up solo and get folded into a table.", cost:"₹200 onwards", url:"https://www.district.in/events/board-games-afternoon-aug16-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:0, a:"multi", cat:"games", name:"Hyderabad Board Gamers' Club", when:"Every Sunday · 16+", where:"Venue shared with registered attendees", note:"Heavy on Blood on the Clocktower. On-time arrivals get seating priority — this fills up.", cost:"₹500 cover, redeemable on food & drinks", url:"https://www.instagram.com/hydbgclub/", added:"2026-08-16"},
+
+    {dow:0, a:"hitech", cat:"stage", name:"Laughter Therapy", when:"Every Saturday & Sunday · 6:00–7:00 PM", where:"Red Rhino, Hitech City", note:"A guided laughter-yoga hour rather than a stand-up show — the cheapest recurring room on this board.", cost:"₹199 onwards", url:"https://www.district.in/events/laughter-therapy-hyderabad-mar14-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:4, a:"multi", cat:"social", name:"Hyderabad BlaBla Language Exchange", when:"Every Thursday · 8:00–10:00 PM", where:"Pushpa Enterprises, Gowliguda", note:"People practise languages over food and drinks in a two-hour Thursday social near the Old City. The recurring format finally gives this board a real weekday language-exchange room beyond the Hitech City corridor.", cost:"Order food or drink", url:"https://allevents.in/hyderabad/hyderabad-blabla-language-exchange-on-thursdays-recurrent-event/200030124693914", added:"2026-09-09", mt:"Green · MGBS"},
+
+    {dow:4, a:"central", cat:"wellness", name:"YSS Thursday Group Meditation", when:"Every Thursday · 4:40–7:00 PM", where:"YSS Dhyana Kendra, Begumpet", note:"The public weekly programme combines silent meditation, devotional chanting and an inspirational reading at the long-running YSS centre. It gives the board a dependable Thursday wellness practice instead of another single weekend workshop.", cost:"Open to public", url:"https://yssofindia.org/location/hyderabad", added:"2026-09-09", mt:"Blue · Prakash Nagar"},
+
+    {dow:5, a:"hitech", cat:"stage", name:"Comedy at Hitech City", when:"Every Friday", where:"The Street Comedy Club, Madhapur", note:"The Street Comedy Club's standing Friday-night line-up at ₹199 — the cheapest door on this board's comedy circuit. The same room also runs weekend slots if the week moves on.", cost:"₹199", url:"https://www.district.in/events/comedy-at-hitech-city-jul13-2025-buy-tickets", added:"2026-08-17"},
+
+    {dow:6, a:"hitech", cat:"games", name:"Board Games Meetup — Hyderabad", when:"Every Saturday & Sunday, all day", where:"Red Rhino, Hitech City", note:"A craft-brewery board-games room running both weekend days — the ₹199 cover is redeemable against food and drink, not just an entry fee.", cost:"₹199 onwards", url:"https://www.district.in/events/board-games-meetup-hyderabad-mar14-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"central", cat:"craft", name:"Clay Puzzle Workshop", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"A clay session that builds pieces of a puzzle you assemble afterwards — a take-home project rather than a wall piece. Runs on the same Saturday calendar as the venue's other workshops.", cost:"₹1,299+", url:"https://www.district.in/events/clay-puzzle-aug1-2026-buy-tickets", added:"2026-08-17"},
+
+    {dow:6, a:"central", cat:"craft", name:"Clay Trinket Workshop", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"A beginner clay session at the venue currently carrying this board's whole central-Hyderabad craft programme — one of nine distinct workshops it runs.", cost:"₹899+", url:"https://www.district.in/events/clay-trinket-workshop-aug1-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"central", cat:"craft", name:"Couple Clay Keychain", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"A two-person format built for a date rather than a solo craft session.", cost:"₹999+", url:"https://www.district.in/events/couple-clay-keychain-aug1-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"central", cat:"craft", name:"Fluid Canvas Art", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"Acrylic pour painting — a take-home canvas rather than a wheel or brush-control session.", cost:"₹999+", url:"https://www.district.in/events/fluid-canvas-art-aug1-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"central", cat:"craft", name:"Fridge Clay Magnet Workshop", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"The cheapest recurring craft slot on this board — a small take-home piece rather than a full session.", cost:"₹699+", url:"https://www.district.in/events/fridge-clay-magnet-workshop-aug1-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"central", cat:"craft", name:"Lippan Art Workshop", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"A mirror-work mud-and-clay craft session at the venue carrying this board's whole central-Hyderabad craft programme. One of the newest additions to its Saturday roster.", cost:"₹999+", url:"https://www.district.in/events/lippan-art-workshop-aug1-2026-buy-tickets", added:"2026-08-17"},
+
+    {dow:6, a:"central", cat:"craft", name:"Mirror Painting", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"Reverse-glass mirror art, one of the venue's less common formats.", cost:"₹899+", url:"https://www.district.in/events/mirror-painting-aug1-2026-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"multi", cat:"speak", name:"Open Mic — Raw & Real", when:"Multiple Saturdays", where:"Locale Cafe & Bistro", note:"A standing open floor for stand-up, poetry and music. Thinnest category on this board — worth a direct check next sweep for more rooms like it.", cost:"₹499", url:"https://www.district.in/events/open-mic-raw-real-may25-2025-buy-tickets", added:"2026-08-16"},
+
+    {dow:6, a:"central", cat:"craft", name:"Pichwai Painting Workshop", when:"Every Saturday, multiple dates", where:"Gipi's Pizza House & Cafe, Himayath Nagar", note:"Traditional Rajasthani devotional painting, taught beginner to advanced — a different craft from the venue's clay sessions.", cost:"₹999+", url:"https://www.district.in/events/pichwai-painting-workshop-aug1-2026-buy-tickets", added:"2026-08-16"},
+
+    {date:"2026-10-09", a:"hitech", cat:"food", name:"Grand Food Fest 2026", when:"Fri 9–Sun 11 Oct · from 12:00 PM", where:"Gachibowli Stadium", note:"A three-day food festival turns the stadium into a broad tasting and social destination rather than a single workshop. The ₹120 entry makes it one of the easiest low-cost group plans on the board.", cost:"₹120", url:"https://allevents.in/hyderabad/grand-food-fest-2026-tickets/80002183818241", added:"2026-09-08"},
+
+    {date:"2026-10-09", a:"hitech", cat:"games", name:"Gyaan Guru Quizzing: MELA - Music | Entertaintment | Literature | Arts", when:"Fri 9 Oct · 8:00 PM–10:00 PM", where:"Mindspace Social", note:"Think you’ve got what it takes to ace a MELA quiz? 🧠✨Pub Quiz ft. Gyan Guru at Mindspace SOCIAL brings together music, entertainment, literature and art in one exciting night of trivia. Team up, sip on #drnks, and compete for bragging rights, freebies and…", cost:"₹299", url:"https://www.district.in/events/gyaan-guru-quizzing-mela-music-entertaintment-literature-arts-oct9-2026-buy-tickets", added:"2026-10-08"},
+
+    {date:"2026-10-09", a:"multi", cat:"wellness", name:"Heartfulness Monthly Retreat — October", when:"Fri–Sun 9–11 Oct · from 9:00 AM", where:"Kanha Shanti Vanam, Nandigama", note:"A free three-day residential introduction combines meditation practice with time in the Heartfulness headquarters campus. Telugu and English sessions make the retreat accessible to first-time seekers.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/heartfulness-monthly-retreat-october-2026-a-three-day-workshop-tickets/80009493681388", added:"2026-09-13"},
+
+    {date:"2026-10-09", a:"hitech", cat:"stage", name:"RageBait — Shubham Shandilya", when:"Fri 9 Oct · 9:00–10:00 PM", where:"The Street Comedy Club, Madhapur", note:"Shubham Shandilya’s solo uses internet outrage and everyday irritation as its comic engine. The late Friday slot fills a useful after-work gap.", cost:"Ticketed", url:"https://allevents.in/hyderabad/ragebait-a-stand-up-solo-by-shubham-shandilya/3900030683188858", added:"2026-09-11"},
+
+    {date:"2026-10-10", a:"multi", cat:"expo", name:"7th World Congress on Traditional Medicine 2026", when:"Sat 10 Oct · 9:00 AM", where:"Kln Prasad Auditorium", note:"The International Conference on Traditional Medicine 2026 will be highlighted on topic \"Reflexochakra Therapy\" on 10th October 2026 at KLN Prasad Auditorium, Red Hills, Hyderabad • World renowned Speaker • Authors, Reviewers and editors are provided with…", cost:"Ticketed", url:"https://allevents.in/hyderabad/7th-world-congress-on-traditional-medicine-2026/200030494988100", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"music", name:"Anirudh DJ Night", when:"Sat 10 Oct · 6:00 PM–9:00 PM", where:"Rumor - Sky Lounge: Hyderabad", note:"Disclamer - This is a DJ NIGHT, Anirudh will not be present. After 3 SOLD OUT shows and 1,000+ fans in Bangalore, the Vera Level Vibe is finally making its way to Hyderabad! Get ready for a night dedicated entirely to the music of Anirudh Ravichander from…", cost:"Ticketed", url:"https://allevents.in/hyderabad/anirudh-dj-night/3900030593319946", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"wellness", name:"Basic Pranic Healing Course", when:"Sat 10 Oct · 9:00 AM", where:"Gachibowli, Hyderabad, Telangana, India", note:"Basic Pranic Healing CourseDiscover the fundamentals of energy healing and learn practical techniques to support physical, emotional, and mental well-being through Pranic Healing. The Basic Pranic Healing Course introduces you to the principles of prana…", cost:"₹8,000", url:"https://allevents.in/hyderabad/basic-pranic-healing-course-tickets/80002675631736", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"stage", name:"Double Masala (Telugu Standup)", when:"Sat 10 Oct · 9:00 PM–10:15 PM", where:"The Street Comedy Club: Hyderabad", note:"Watch comedians from Hyderabad perform their jokes in Telugu! Bhagat and Yash are seasoned comedians from Hyderabad who will take you through the best of their jokes developed over the last few years! Spend an evening forgetting all your worries getting…", cost:"Ticketed", url:"https://allevents.in/hyderabad/double-masala-telugu-standup/3900030763413223", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"craft", name:"Japanese Kintsugi Art", when:"Sat 10 Oct · 1:01 PM–2:01 PM", where:"Mexarosa: Nanakramguda, Hyderabad", note:"Discover the ancient Japanese art of Kintsugi art the mindful practice of repairing broken pottery with shimmering gold, turning shattered fractures into beautiful veins of resilience. Join a hands-on workshop to master this centuries-old technique,…", cost:"Ticketed", url:"https://allevents.in/hyderabad/japanese-kintsugi-art/3900030780289149", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"banjara", cat:"games", name:"Lego Builders Meetup", when:"Sat 10 Oct · 3:32 PM–4:32 PM", where:"Grano: Coffee Affairs, Hyderabad", note:"LEGO Builders MeetupWhether you are a lifelong LEGO enthusiast or someone who simply enjoys building, LEGO Builders Meetup is the perfect place to connect with like minded people through creativity. Bring your imagination to life as you build individually…", cost:"Ticketed", url:"https://allevents.in/hyderabad/lego-builders-meetup/3900030781732822", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"stage", name:"Peeyush Kumar Live - Stand Up Comedy", when:"Sat 10 Oct · 7:30 PM–9:00 PM", where:"The Comedy Theatre: Hyderabad.", note:"Peeyush Kumar is back with his new 1 hour of jokes. Peeyush is older, funnier but not wise enough. He is still worried that he may not have matured to justify his age. He talks about books, war, family, childhood and everything in between.", cost:"Ticketed", url:"https://allevents.in/hyderabad/peeyush-kumar-live-stand-up-comedy/3900030664645200", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"stage", name:"Sapan Verma Live — 2026 New Tour", when:"Sat 10 Oct · 7:00 PM", where:"District 150, Knowledge City", note:"Sapan Verma’s new hour moves from artificial intelligence to children’s birthday parties through sharp personal storytelling. District 150 is a new comedy venue for this board and the ₹499 entry is clearly listed.", cost:"₹499", url:"https://allevents.in/hyderabad/sapan-verma-live-2026-new-tour/3900030237573718", added:"2026-09-08"},
+
+    {date:"2026-10-10", a:"central", cat:"stage", name:"Shashi Dhiman Live", when:"Sat 10 Oct · 7:00–9:00 PM", where:"FTCCI, Lakdikapul", note:"Shashi Dhiman brings a two-hour touring stand-up show to the FTCCI auditorium. It strengthens central Hyderabad’s thin evening coverage with a clearly timed ticketed event.", cost:"₹499", url:"https://allevents.in/hyderabad/shashi-dhiman-live/3900030183874921", added:"2026-09-11", mt:"Red · Lakdikapul"},
+
+    {date:"2026-10-10", a:"hitech", cat:"games", name:"Shrubs Bingo.", when:"Sat 10 Oct · 3:00 PM", where:"HOSHI Cafe: Hyderabad", note:"WHAT IF BINGO GREW THE LIFE OF A PLANTShrubs Bingo is Hyderabads first plant themed bingo. The only rule that matters is this. Everyone leaves with a live plant. HERE IS HOW IT WORKS Forget numbers. We call out plant names instead. Keep marking your bingo…", cost:"Ticketed", url:"https://allevents.in/hyderabad/shrubs-bingo/3900030771547529", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"stage", name:"The Boibhob Show", when:"Sat 10 Oct · 9:30 PM–11:00 PM", where:"The Comedy Theatre: Hyderabad.", note:"An interactive stand up comedy show by Boibhob - the unhinged, unfiltered and unabashed alter ego from Kolkata of Vaibhav Sethia.", cost:"Ticketed", url:"https://allevents.in/hyderabad/the-boibhob-show/3900030716163410", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"stage", name:"The Midlife Crisis", when:"Sat 10 Oct · 8:30 PM–10:00 PM", where:"Brew Commune Cafe &amp; Bistro", note:"The Midlife CrisisToo young to retire, too young to party. Remember when weekends meant wild plans? Now they are about finding parking, comparing health reports, and debating which orthopedic mattress is worth the money. The Midlife Crisis is a hilarious…", cost:"₹249–₹399", url:"https://allevents.in/secunderabad/the-midlife-crisis/4100030733947839", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"stage", name:"The Room of Memories", when:"Sat 10 Oct · 11:00 AM–12:15 PM", where:"Shilpakala Vedika, Madhapur", note:"International performer Katastrofa combines flying balloons, giant bubbles, puppets, storytelling and magic in a family stage show. The production has toured 25 countries and gives the board a rare daytime performance.", cost:"₹499–₹3,499", url:"https://allevents.in/hyderabad/the-room-of-memories-tickets/80002276877238", added:"2026-09-08"},
+
+    {date:"2026-10-10", a:"hitech", cat:"games", name:"The SOCIAL Beer-lympics | Hyderabad", when:"Sat 10 Oct · 3:00 PM–6:00 PM", where:"Mindspace Social", note:"THE SOCIAL BEER-LYMPICS ARE HERE. This Oktoberfest, SOCIAL is putting beer skills to the ultimate test. The Beer-lympics bring together Beer Pong, Flip Cup Relay, Hold The Baalti Challenge and Buzzed Quiz for a little friendly competition, a lot of beer…", cost:"₹499", url:"https://www.district.in/events/the-social-beerlympics-hyderabad-oct10-2026-buy-tickets", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"multi", cat:"craft", name:"Tie, Dye, Weave: A Telangana Ikat Experience", when:"Sat 10 Oct · 10:00 AM–5:00 PM", where:"Disukhnagar", note:"Step into the world of one of India's most mesmerizing textile traditions with a day-long immersion into the art of Ikat in Telangana. The day begins early, with pickup arranged from a convenient point in Hyderabad for the short drive out to Telangana's…", cost:"Ticketed", url:"https://allevents.in/hyderabad/tie-dye-weave-a-telangana-ikat-experience/200030770074605", added:"2026-10-08"},
+
+    {date:"2026-10-10", a:"central", cat:"startup", name:"Zoho Marketing Launchpad - 2026 - Hyderabad", when:"Sat 10 Oct · 9:00 AM–5:00 PM", where:"Aditya Park Sarovar Portico Hyderabad", note:"About the event:Marketing Launchpad 2026 by Zoho - HyderabadAn event for marketers in Hyderabad! Your search for marketing best practices is over; all your marketing questions are about to be answered. We welcome you to Zoho's Marketing Launchpad 2025 - An…", cost:"Ticketed", url:"https://allevents.in/hyderabad/zoho-marketing-launchpad-2026-hyderabad/80009526719353", added:"2026-10-08"},
+
+    {date:"2026-10-11", a:"multi", cat:"dance", name:"Dandiya Night 2.0 - 2026", when:"Sun 11 Oct · 5:00 PM–10:30 PM", where:"Minerva Garden Function Hall", note:"Hyderabad, get ready for a Dandiya celebration like never before! 💃✨This Navratri, ACEMANIA ENTERTAINMENTS brings you DANDIYA NIGHT 2.0 — an electrifying celebration of music, dance, culture, colours, and unforgettable memories. Get ready for what…", cost:"₹129–₹1,499", url:"https://allevents.in/hyderabad/dandiya-night-20-2026/4100030740423144", added:"2026-10-08"},
+
+    {date:"2026-10-11", a:"hitech", cat:"social", name:"Dandiya Nights 2026 — Hyderabad", when:"Sun 11 Oct · 6:00–11:00 PM", where:"Sri Infinity Convention, Manikonda", note:"Five hours of garba and dandiya turn a convention lawn into a full Navratri social night. It adds a seasonal dance format without needing a permanent dance category.", cost:"₹399–₹2,099", url:"https://allevents.in/hyderabad/dandiya-nights-2026-hyderabad/4100030583569004", added:"2026-09-08"},
+
+    {date:"2026-10-11", a:"banjara", cat:"dance", name:"Elite Dandiya Festival 2026", when:"Sun 11 Oct · 7:00 PM–10:30 PM", where:"Taj Deccan", note:"Get ready, Hyderabad! This Navratri, experience 9 nights of music, dance, culture, and celebration at Elite Dandiya Festival 2026. Enjoy a festive experience featuring Dandiya, Garba, high-energy Dhol, Bhajan Jamming, and live DJ music. The celebration…", cost:"₹399–₹3,500", url:"https://allevents.in/hyderabad/elite-dandiya-festival-2026/4100030740773746", added:"2026-10-08"},
+
+    {date:"2026-10-11", a:"hitech", cat:"outdoors", name:"Grace Cancer Run Hyderabad 2026", when:"Sun 11 Oct · from 5:00 AM", where:"Gachibowli Stadium", note:"Choose a 2K, 5K or 10K distance in a large awareness run based at Gachibowli Stadium. The multiple distances make it more approachable for a mixed-fitness group.", cost:"Registration required", url:"https://allevents.in/hyderabad/grace-cancer-run-hyderabad-2026/200030398540523", added:"2026-09-08"},
+
+    {date:"2026-10-11", a:"central", cat:"dance", name:"Naavika- Dandiya Night", when:"Sun 11 Oct · 5:00 PM–11:00 PM", where:"Naina Conventions", note:"Naavika is our festive Dandiya &amp; Garba Night at Metro Grounds, designed to bring the true spirit of Navratri alive. The evening will be filled with energetic dandiya and garba beats, a lively DJ, delicious food stalls, and full security…", cost:"₹199–₹1,999", url:"https://allevents.in/secunderabad/naavika-dandiya-night/4100030740773645", added:"2026-10-08"},
+
+    {date:"2026-10-11", a:"multi", cat:"dance", name:"Raastaali Dandiyaraas", when:"Sun 11 Oct · 8:00 PM–11:59 PM", where:"Vysta Conventions and Resorts", note:"Step into a night of grandeur and grace. Raastali Dandiyaras invites you to a royal celebration where tradition is elevated into an art form. Surrounded by opulent aesthetics, enchanting music, and an atmosphere charged with elite energy, this is where…", cost:"₹399–₹1,299", url:"https://allevents.in/hyderabad/raastaali-dandiyaraas/4100030705268606", added:"2026-10-08"},
+
+    {date:"2026-10-11", a:"multi", cat:"dance", name:"Rangtaali - Dandiya Night 5.0", when:"Sun 11 Oct · 9:00 PM", where:"Citadel Hotels &amp; Conventions By Vinnca", note:"Experience the vibrant spirit of Navratri at Rangtaali, the city's premier event. Celebrate ten unforgettable nights filled with electrifying music, mouth-watering cuisine, and a spacious 40,000 sq. ft. fully air-conditioned venue. Don’t miss out on daily…", cost:"₹4,130", url:"https://allevents.in/hyderabad/rangtaali-dandiya-night-50/4100030740426405", added:"2026-10-08"},
+
+    {date:"2026-10-11", a:"central", cat:"stage", name:"Standing Up — Kunal Kamra", when:"Sun 11 Oct · 3:00–4:30 PM", where:"Visvesvaraya Bhavan, Khairatabad", note:"Kunal Kamra brings a new-material set to a central auditorium rather than the city’s small comedy-club circuit. The afternoon timing also leaves the evening free for Dandiya or another plan.", cost:"Ticketed", url:"https://allevents.in/hyderabad/standing-up-by-kunal-kamra/3900030389616633", added:"2026-09-08", mt:"Red · Lakdi-ka-pul"},
+
+    {date:"2026-10-12", a:"hitech", cat:"social", name:"Crazy &amp; adventurous Dasara Camp", when:"Mon 12 Oct · 10:00 AM–3:05 PM", where:"The Little Gym Nallagandla: Hyderabad", note:"Make this festive break active, creative, and unforgettable at The Little Gym Nallagandla Dussehra CampKeep your child engaged during the holidays with a perfect blend of high-energy movement, creative exploration, and festive joy. Designed to foster…", cost:"Ticketed", url:"https://allevents.in/hyderabad/crazy-and-adventurous-dasara-camp/3900030746489743", added:"2026-10-08"},
+
+    {date:"2026-10-15", a:"hitech", cat:"startup", name:"Seed Business School Festival — Hyderabad", when:"Thu 15 Oct · 5:00–9:30 PM", where:"Le Méridien Hyderabad, Gachibowli", note:"Admissions directors from more than 20 international business schools meet candidates in person at no charge. It is a useful Thursday professional room for comparing programmes before committing to applications.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/seed-business-school-festival-2026-hyderabad/100001998879351950", added:"2026-09-08"},
+
+    {date:"2026-10-16", a:"multi", cat:"dance", name:"ARTSY EVENTS DANDIYA NIGHTS", when:"Fri 16 Oct · 6:30 PM", where:"Prime Arena", note:"✨ Get ready to sparkle and dance at ARTSY EVENTS DANDIYA NIGHTS! Join us for an unforgettable three-day celebration from October 16th to 18th filled with music, rhythm, and vibrant energy that brings together families, students, and friends alike!…", cost:"₹299–₹2,999", url:"https://allevents.in/hyderabad/artsy-events-dandiya-nights-tickets/80003145688097", added:"2026-10-08"},
+
+    {date:"2026-10-16", a:"multi", cat:"dance", name:"Naacho Navratri", when:"Fri 16 Oct · 6:00 PM", where:"Kalyana Lakshmi Gardens: Hyderabad", note:"Naacho Navaratri 2026Get ready for two unforgettable nights of music, dance and festive celebrations at Naacho Navaratri. Join us on 16th &amp; 17th and 18th October 2026 at Kalyan Lakshmi Gardens, Nagole, Hyderabad for an exciting Navaratri celebration filled…", cost:"Ticketed", url:"https://allevents.in/hyderabad/naacho-navratri/3900030754128406", added:"2026-10-08"},
+
+    {date:"2026-10-17", a:"multi", cat:"startup", name:"Entrepreneurs Meetup by We Founders Collab Hyderabad", when:"Sat 17 Oct · 10:30 AM–1:30 PM", where:"The Headquarters Orbit", note:"Entrepreneurs Meetup by We Founders Collab Hyderabad Event Description Entrepreneurs Meetup powered by We Founders Collab is a vibrant gathering designed exclusively for entrepreneurs seeking networking opportunities and valuable connections. Join us…", cost:"₹475", url:"https://allevents.in/hyderabad/entrepreneurs-meetup-by-we-founders-collab-hyderabad-tickets/80003714359685", added:"2026-10-08"},
+
+    {date:"2026-10-17", a:"hitech", cat:"startup", name:"Inside PGP PRO — October", when:"Sat 17 Oct · 11:00 AM–1:00 PM", where:"Indian School of Business, Gachibowli", note:"ISB faculty, alumni and admissions staff explain the working-professional PGP PRO programme on campus. This October edition gives prospective applicants direct access to the people who teach, completed and manage the course.", cost:"Free", free:true, url:"https://allevents.in/hyderabad/inside-pgp-pro-meet-isb-faculty-alumni-and-admissions-team-in-isb-hyderabad/100001999977081288", added:"2026-09-15"},
+
+    {date:"2026-10-17", a:"multi", cat:"dance", name:"Raas Rang 2026", when:"Sat 17 Oct · 5:30 PM–10:45 PM", where:"Pindi Pulla Reddy Gardens", note:"Get ready for Hyderabad's most exciting Navratri celebration! RAAS RANG 2026 brings together the energy of Dandiya &amp; Garba, live music, festive vibes, delicious food, shopping, games, and unforgettable memories—all under one roof.✨ Grand Dandiya &amp; Garba…", cost:"₹249–₹5,999", url:"https://allevents.in/hyderabad/raas-rang-2026/4100030721614613", added:"2026-10-08"},
+
+    {date:"2026-10-18", a:"hitech", cat:"stage", name:"Rajat Chauhan live", when:"Sun 18 Oct · 3:00 PM–5:00 PM", where:"The Comedy Theatre: Hyderabad.", note:"Rajat Chauhan, Delhi based comedian with 1 million subscribers, 65+ millions on YouTube is coming to tickle your funny bones at The Comedy Theatre Club: Gurgaon ! Engineer by education, he started following his real passion after completing 7 years in…", cost:"Ticketed", url:"https://allevents.in/hyderabad/rajat-chauhan-live/3900030629281301", added:"2026-10-08"},
+
+    {date:"2026-10-18", a:"hitech", cat:"stage", name:"Rohan Gujral Live", when:"Sun 18 Oct · 6:00 PM–7:30 PM", where:"District 150: Hyderabad", note:"Rohan Gujral Live is a standup comedy show where Rohan does one hour of his best jokes. The show has jokes from his school, college, personal, professional, spiritual and whatever other life is possible. Basically if a joke is possible, Rohan will find it…", cost:"Ticketed", url:"https://allevents.in/hyderabad/rohan-gujral-live/3900030703653457", added:"2026-10-08"},
+
+    {date:"2026-10-23", a:"multi", cat:"expo", name:"CEO Leadership Summit 2026 - The Future of Humane Leadership", when:"Fri 23 Oct · 12:00 AM", where:"Kanha Shanti Vanam", note:"Heartfulness Institute in partnership with Adizes Institute Worldwide brings to youCEO Leadership Summit 2026 - The Future of Humane Leadership at Kanha Shanti Vanam near Hyderabad, Telangana. A global gathering of leaders from business, government,…", cost:"₹50,000", url:"https://allevents.in/hyderabad/ceo-leadership-summit-2026-the-future-of-humane-leadership-tickets/80002688111358", added:"2026-10-08"},
+
+    {date:"2026-10-23", a:"multi", cat:"expo", name:"GANSID 4th International Congress for Sickle Cell and Inherited Blood Disorders", when:"Fri 23 Oct · 8:00 AM", where:"HYDERABAD INTERNATIONAL CONVENTION CENTRE-HICC, Izzathnagar, Kothaguda, Hyderabad, Telangana, India", note:"The GANSID 4th International Congress 2026 on Sickle Cell &amp; Other Inherited Blood Disorders is the first in-person GANSID Congress, bringing together clinicians, researchers, scientists, patient organizations, industry partners, policymakers, and global…", cost:"Ticketed", url:"https://allevents.in/hyderabad/gansid-4th-international-congress-for-sickle-cell-and-inherited-blood-disorders/80006821000294", added:"2026-10-08"},
+
+    {date:"2026-10-24", a:"banjara", cat:"food", name:"Entremets — Black Forest Revisited", when:"Sat 24 Oct · 10:00 AM–2:00 PM", where:"100 Folds Academy, Jubilee Hills", note:"The four-hour class rebuilds Black Forest as a modern layered entremet rather than a standard sponge cake. It extends the academy’s dated programme into late October with a more advanced format.", cost:"Ticketed", url:"https://allevents.in/hyderabad/entremets-making-black-forest-revisited/3900030657722931", added:"2026-09-10"},
+
+    {date:"2026-10-24", a:"hitech", cat:"stage", name:"Finding Love : Standup Comedy Solo By Vaibhav Karn", when:"Sat 24 Oct · 6:00 PM–7:30 PM", where:"The Comedy Theatre: Hyderabad.", note:"With over 5 million views on youtube and more than 100 million on insta, Vaibhav Karn is back with his new show Finding Love which is all about his journey of falling and finding love. IITian turned standupcomedian is ready to take stage with his clean and…", cost:"Ticketed", url:"https://allevents.in/hyderabad/finding-love-standup-comedy-solo-by-vaibhav-karn/3900030718967409", added:"2026-10-08"},
+
+    {date:"2026-10-24", a:"multi", cat:"expo", name:"Khane Ka Bazaar Season 3", when:"Sat 24 Oct · 10:00 AM", where:"Public Garden Road", note:"Khane Ka Bazaar Season 3 mein swad aur shopping ka dhamaka, aapka favorite food mela vaapas!", cost:"Ticketed", url:"https://allevents.in/hyderabad/khane-ka-bazaar-season-3/100002001968908898", added:"2026-10-08"},
+
+    {date:"2026-10-24", a:"hitech", cat:"music", name:"PinkFloyd &amp; Linkin Park Tribute ft. String on Fire", when:"Sat 24 Oct · 9:00 PM–11:00 PM", where:"Hard Rock Cafe Hitech City: Hyderabad", note:"Get ready for a powerful night that brings together two iconic sounds from different generations! String on Fire pays tribute to the timeless brilliance of Pink Floyd and the electrifying energy of Linkin Park. From atmospheric classics and unforgettable…", cost:"Ticketed", url:"https://allevents.in/hyderabad/pinkfloyd-and-linkin-park-tribute-ft-string-on-fire/3900030745031915", added:"2026-10-08"},
+
+    {date:"2026-10-25", a:"multi", cat:"food", name:"Akshayakalpa Organic presents Forgotten Foods", when:"Sun 25 Oct · 10:30 AM–11:30 AM", where:"Akshayakalpa Organic - Agriculture Research and Development Facility, Telangana", note:"This world food day, come hungry, come curious. When was the last time you harvested a vegetable, cooked over a wood fire or met the person who grew your food? This World Food Day, spend a full day at Akshayakalpa Organic Farm rediscovering and celebrating…", cost:"₹349–₹699", url:"https://allevents.in/hyderabad/akshayakalpa-organic-presents-forgotten-foods-tickets/80002473074971", added:"2026-10-08"},
+
+    {date:"2026-10-25", a:"multi", cat:"social", name:"PGP Insights: Meet ISB faculty, alumni and Admissions Team at Hyderabad", when:"Sun 25 Oct · 3:00 PM–5:00 PM", where:"Indian School of Business", note:"Engage with ISB faculty, alumni and the Admissions Team to understand the PGP experience, peer learning, and career transformation.", cost:"Ticketed", url:"https://allevents.in/hyderabad/pgp-insights-meet-isb-faculty-alumni-and-admissions-team-at-hyderabad/100002002493456835", added:"2026-10-08"},
+
+    {date:"2026-10-31", a:"banjara", cat:"food", name:"Classic Tarts — 100 Folds Academy", when:"Sat 31 Oct · 10:00 AM–1:00 PM", where:"100 Folds Academy, Jubilee Hills", note:"A three-hour tart class closes the academy’s October programme with pastry structure, fillings and finishing. It is a different technique from the gateaux and plated-dessert sessions already listed.", cost:"Ticketed", url:"https://allevents.in/hyderabad/classic-tarts/3900030656661107", added:"2026-09-10"},
+
+    {date:"2026-10-31", a:"central", cat:"stage", name:"Telling Lies -A Standup Solo by Aashish Solanki", when:"Sat 31 Oct · 7:00 PM–8:30 PM", where:"KLN Prasad Auditorium - FTCCI: Hyderabad", note:"Aashish Solanki is back with a brand-new hour and lifes a little different now. Hes a new dad still figuring out how to be a parent while surviving on coffee and jokesTheres love of course first love that never really goes away and gym sessions that mostly…", cost:"Ticketed", url:"https://allevents.in/hyderabad/telling-lies-a-standup-solo-by-aashish-solanki/3900030598974832", added:"2026-10-08"},
+
+    {date:"2026-10-31", a:"banjara", cat:"social", name:"WISH Spooktacular", when:"Sat 31 Oct · 4:00 PM–7:00 PM", where:"Wish Banjara Hills-Preschool &amp; Daycare: Hyderabad", note:"WISH SPOOKTACULAR - HALLOWEEN WONDERLAND 2026HYDERABAD, GET READY FOR THE BIGGEST HALLOWEEN EXPERIENCE FOR LITTLE ONES. For the first time in Hyderabad, WISH brings you a spectacular Halloween bash created especially for babies, toddlers, preschoolers and…", cost:"Ticketed", url:"https://allevents.in/hyderabad/wish-spooktacular/3900030599671217", added:"2026-10-08"},
+
+    {date:"2026-11-01", a:"multi", cat:"outdoors", name:"Equality Run 2026", when:"Sun 1 Nov · from 5:30 AM", where:"Statue of Equality, Shamshabad", note:"The Statue of Equality brings runners, families, health professionals and volunteers together around fitness and social responsibility. The early-morning run requires advance registration at the exact event page.", cost:"Registration required", url:"https://allevents.in/hyderabad/equality-run-2026/200030682112929", added:"2026-09-15", mt:"No nearby Metro — cab required"},
+
+    {date:"2026-11-02", a:"banjara", cat:"expo", name:"Global Pharma Partnering Summit", when:"Mon 2 Nov · 9:00 AM", where:"JRC Conventions &amp; Trade Fairs", note:"The Global Pharma Partnering Summit is a premier business event that brings together pharmaceutical companies, biotech innovators, manufacturers, researchers, investors, technology providers, and solution partners to foster meaningful collaborations and…", cost:"Ticketed", url:"https://allevents.in/hyderabad/global-pharma-partnering-summit-tickets/80002310218916", added:"2026-10-08"},
+
+    {date:"2026-11-08", a:"multi", cat:"outdoors", name:"K*ll Piracy - Save Cinema - Cyclothon", when:"Sun 8 Nov · 7:00 AM–9:00 AM", where:"Necklace Road Railway Station, Hussain Sagar, Khairtabad, Hyderabad, Telangana", note:"🎬 Save Small Budget Cinema Cyclothon &amp; RallyCinetaria Foundation, in association with the Hyderabad Cycling Group (HCG), is organizing a \"Save Cinema - K*ll Piracy\" / \"Don't watch pirated Movies - Cyclothon\" Rally. Date &amp; Time: November 08, 2026Route:…", cost:"Ticketed", url:"https://allevents.in/hyderabad/kll-piracy-save-cinema-cyclothon-tickets/80001555768368", added:"2026-10-08"},
+
+    {date:"2026-11-14", a:"multi", cat:"social", name:"Inside PGP PRO: Meet ISB Faculty &amp; Alumni in ISB Hyderabad Campus", when:"Sat 14 Nov · 11:00 AM–1:00 PM", where:"Indian School of Business ,Hyderabad", note:"Inside PGP PRO: Meet ISB Faculty &amp; Alumni in ISB Hyderabad Campus", cost:"Ticketed", url:"https://allevents.in/hyderabad/inside-pgp-pro-meet-isb-faculty-and-alumni-in-isb-hyderabad-campus/100002002686555398", added:"2026-10-08"},
+
+    {date:"2026-11-14", a:"multi", cat:"music", name:"Shankarabaranam - cultural Music and Dance Event", when:"Sat 14 Nov · 9:08 AM–8:00 PM", where:"Telangana Saraswatha Parishath", note:"🌟 Join us for an enchanting morning of joy at \"Shankarabaranam,\" a cultural celebration of music and dance dedicated to our beloved Dr. Viswanath on Children's Day! Experience the magic of classical music and captivating dance performances that are sure…", cost:"Ticketed", url:"https://allevents.in/hyderabad/shankarabaranam-cultural-music-and-dance-event-tickets/80002862999183", added:"2026-10-08"},
+
+    {date:"2026-11-29", a:"hitech", cat:"stage", name:"Don't Give Your Best by Rahul Subramanian", when:"Sun 29 Nov · 7:00 PM–8:30 PM", where:"Shilpakala Vedika: Hyderabad", note:"After touring his stand-up comedy show Who Are You? for over two years and earning a nomination for Best Show at the Melbourne International Comedy Festival 2025, Rahul is back on the road with a brand new stand-up comedy show. Performed in Hinglish, this…", cost:"Ticketed", url:"https://allevents.in/hyderabad/dont-give-your-best-by-rahul-subramanian/3900030683778035", added:"2026-10-08"},
+
+    {date:"2026-12-03", a:"multi", cat:"expo", name:"Industrial Pumps and Valves 2026", when:"Thu 3 Dec · 10:00 AM", where:"HITEX EXHIBITION CENTER", note:"IPVS 2026 is India’s premier B2B expo showcasing the latest innovations in industrial pumps, valves, and chemical process equipment.", cost:"Ticketed", url:"https://allevents.in/hyderabad/industrial-pumps-and-valves-2026/100001989889217215", added:"2026-10-08"},
+
+    {date:"2026-12-05", a:"central", cat:"stage", name:"Chikka on Roll", when:"Sat 5 Dec · 7:00 PM–8:00 PM", where:"KLN Prasad Auditorium - FTCCI: Hyderabad", note:"Ruchika will talk about how adulting and being in twenties changed her life, falling in love breaking in one and while not loosing hope for it, her realisation of life and importance of relationships and friendships. Changing life, healing, her mental…", cost:"Ticketed", url:"https://allevents.in/hyderabad/chikka-on-roll/3900030703846636", added:"2026-10-08"},
+
+    {date:"2026-12-16", a:"central", cat:"expo", name:"World Data Center Summit - India", when:"Wed 16 Dec · 9:00 AM–5:00 PM", where:"THE PARK HYDERABAD", note:"India has emerged as one of the world's fastest-growing digital infrastructure markets, driven by rapid digital transformation, widespread cloud adoption, AI innovation, and the exponential growth of data consumption. As enterprises, government agencies,…", cost:"Ticketed", url:"https://allevents.in/hyderabad/world-data-center-summit-india-tickets/80002557113801", added:"2026-10-08"},
+
+    {date:"2027-01-22", a:"multi", cat:"expo", name:"EAW Global Aqua Expo 2027", when:"Fri 22 Jan · 10:00 AM", where:"hitex", note:"EAW Global Aqua Expo Hyderabad 2027 to Connect South India’s Growing Water Industry with Global Technology and Business Opportunities", cost:"Ticketed", url:"https://allevents.in/hyderabad/eaw-global-aqua-expo-2027/100001999669060991", added:"2026-10-08"},
+
+    {date:"2027-02-07", a:"central", cat:"outdoors", name:"Hare Krishna Run 2027 — Second Edition", when:"Sun 7 Feb 2027 · 5:00–6:00 AM", where:"Sanjeevaiah Park, Hussain Sagar", note:"The second Hare Krishna Run offers multiple race distances from Sanjeevaiah Park at sunrise. It is far ahead, but the exact ticket page and tiered prices are already live for runners planning their season.", cost:"₹699–₹1,099", url:"https://allevents.in/hyderabad/hare-krishna-run-2027-2nd-edition-tickets/80001888300347", added:"2026-09-10"}
   ];
 
   var CLASSES = [

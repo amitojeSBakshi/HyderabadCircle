@@ -1,5 +1,5 @@
-﻿/* Hyderabad Circle - build 20260915-105857-4529 */
-var CACHE = "hyderabad-circle-20260915-105857-4529";
+﻿/* Hyderabad Circle - build 20261007-190356-4274 */
+var CACHE = "hyderabad-circle-20261007-190356-4274";
 var ASSETS = ["./", "./index.html", "./manifest.json",
               "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
